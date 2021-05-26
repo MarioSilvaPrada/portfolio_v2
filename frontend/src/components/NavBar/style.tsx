@@ -5,6 +5,7 @@ export const Container = styled.div`
   padding: ${({ theme }) => theme.dimensions.marginPage};
   display: flex;
   align-items: center;
+  position: relative;
 `;
 
 export const StyledLink = styled(Link)`
@@ -13,9 +14,11 @@ export const StyledLink = styled(Link)`
 `;
 
 export const LinkWrapper = styled.div`
-  flex-grow: 2;
   display: flex;
   justify-content: center;
+  width: 100%;
 `;
 
-export const Logo = styled.img``;
+export const Logo = styled.img`
+  position: absolute;
+`;
