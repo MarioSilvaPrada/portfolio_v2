@@ -1,10 +1,14 @@
 const theme = {
-  red: 'red',
-  green: 'green',
+  colors: {
+    main: '#F05945',
+  },
   fontSize: {
-    small: '9px',
-    medium: '17px',
-    big: '40px',
+    small: '.6rem',
+    medium: '1.1rem',
+    big: '1.8rem',
+  },
+  dimensions: {
+    marginPage: '1.5rem',
   },
 };
 
