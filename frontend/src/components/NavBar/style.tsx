@@ -5,7 +5,10 @@ export const Container = styled.div`
   padding: ${({ theme }) => theme.dimensions.marginPage};
   display: flex;
   align-items: center;
-  position: relative;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  transition: 1s;
 `;
 
 export const StyledLink = styled(Link)`
