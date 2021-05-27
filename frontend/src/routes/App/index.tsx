@@ -3,8 +3,8 @@ import * as S from './style';
 
 import Profile from 'assets/pic.png';
 import Button from 'components/Button';
+import Social from 'components/Social';
 
-import { FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 const App: FC = () => (
   <S.Container>
     <S.ImageWrapper>
@@ -20,20 +20,7 @@ const App: FC = () => (
       <Button>Check my work</Button>
     </S.GreetingsWrapper>
 
-    <S.SocialWrapper>
-      <S.StyledIcon href='https://github.com/mariosilvaprada' target='blank'>
-        <FaGithub />
-      </S.StyledIcon>
-      <S.StyledIcon
-        href='https://www.linkedin.com/in/mariosilvaprada/'
-        target='blank'
-      >
-        <FaLinkedinIn />
-      </S.StyledIcon>
-      <S.StyledIcon href='https://twitter.com/MarioSilvaPrada' target='blank'>
-        <FaTwitter />
-      </S.StyledIcon>
-    </S.SocialWrapper>
+    <Social />
   </S.Container>
 );
 
