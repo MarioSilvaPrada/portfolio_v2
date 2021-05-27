@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { FaCheck } from 'react-icons/fa';
+import { BsLink } from 'react-icons/bs';
 
 export const Square = styled.div`
   width: 12rem;
@@ -21,11 +23,19 @@ export const MainSquare = styled.div`
   max-width: 24rem;
 `;
 
+export const Container = styled.div`
+  max-width: 80rem;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+`;
+
 export const Wrapper = styled.div`
   margin-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 `;
 
 export const CatWrapper = styled.div`
@@ -35,6 +45,7 @@ export const CatWrapper = styled.div`
 export const CatTitle = styled.h1`
   color: white;
   text-align: center;
+  margin-bottom: 1.2rem;
 `;
 
 export const StyledText = styled.p`
@@ -48,4 +59,31 @@ export const IconsWrapper = styled.div`
   font-size: 10rem;
   justify-content: center;
   margin-bottom: 2rem;
+`;
+
+export const ListWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Option = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+`;
+
+export const OptionText = styled.p`
+  color: white;
+  font-size: 1.8rem;
+`;
+
+export const Check = styled(FaCheck)`
+  color: ${({ theme }) => theme.colors.main};
+  font-size: 1.8rem;
+  margin-right: 0.7rem;
+`;
+
+export const ChainIcon = styled(BsLink)`
+  font-size: 5rem;
+  color: white;
 `;
