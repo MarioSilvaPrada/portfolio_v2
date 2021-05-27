@@ -1,11 +1,16 @@
 import styled from 'styled-components';
 
+export const StyledBody = styled.div`
+  padding: ${({ theme }) => theme.dimensions.marginPage};
+`;
+
 export const Container = styled.div`
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-bottom: 3rem;
 `;
 
 export const Title = styled.div`

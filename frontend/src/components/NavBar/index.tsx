@@ -27,7 +27,9 @@ const NavBar = () => {
       <S.Logo src={Logo} />
       <S.LinkWrapper>
         {menuOptions.map(({ text, to }) => (
-          <S.StyledLink to={to}>{text}</S.StyledLink>
+          <S.StyledLink key={text} to={to}>
+            {text}
+          </S.StyledLink>
         ))}
       </S.LinkWrapper>
     </S.Container>

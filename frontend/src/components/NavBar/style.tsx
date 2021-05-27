@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
   padding: ${({ theme }) => theme.dimensions.marginPage};
+
   display: flex;
   align-items: center;
   position: fixed;

@@ -21,7 +21,7 @@ const Button: FC = () => {
   return (
     <S.SocialWrapper>
       {socialOptions.map(({ Icon, link }) => (
-        <S.StyledIcon href={link} target='blank'>
+        <S.StyledIcon key={link} href={link} target='blank'>
           <Icon />
         </S.StyledIcon>
       ))}

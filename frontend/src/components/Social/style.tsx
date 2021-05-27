@@ -5,8 +5,6 @@ export const SocialWrapper = styled.div`
   flex-direction: column;
   position: absolute;
   right: 0;
-  margin-right: ${({ theme }) => theme.dimensions.marginPage};
-
   a:not(:last-child) {
     margin-bottom: 3rem;
   }
