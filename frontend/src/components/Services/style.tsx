@@ -27,7 +27,7 @@ export const Container = styled.div`
   max-width: 80rem;
   display: flex;
   justify-content: center;
-  margin: 0 auto;
+  margin: 4rem auto;
 `;
 
 export const Wrapper = styled.div`
@@ -40,6 +40,9 @@ export const Wrapper = styled.div`
 
 export const CatWrapper = styled.div`
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const CatTitle = styled.h1`
@@ -51,6 +54,7 @@ export const CatTitle = styled.h1`
 export const StyledText = styled.p`
   color: ${({ theme }) => theme.colors.main};
   font-size: 2.8rem;
+  text-align: center;
 `;
 
 export const IconsWrapper = styled.div`
