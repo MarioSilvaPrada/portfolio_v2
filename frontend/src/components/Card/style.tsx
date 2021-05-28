@@ -6,10 +6,12 @@ type Props = {
   isVisible?: boolean;
 };
 
+const DISTANCE = '80rem';
+
 const swipeIn = (isEven: boolean) => keyframes`
     0% {
         opacity: 0;
-        transform: translateX(${isEven ? '100%' : '-100%'});
+        transform: translateX(${isEven ? DISTANCE : -DISTANCE});
     }
     100% {
         transform: translateX(0);
@@ -27,7 +29,9 @@ export const Wrapper = styled.div<Props>`
   margin-right: ${({ isEven }) => (isEven ? '10rem' : 0)};
   margin-left: ${({ isEven }) => (isEven ? 0 : '10rem')};
   margin-bottom: 2rem;
-  transform: translateX(${({ isEven }) => (isEven ? '100%' : '-100%')});
+  transform: translateX(
+    ${({ isEven }) => (isEven ? DISTANCE : `-${DISTANCE}`)}
+  );
   animation: 0.9s ${({ isVisible, isEven }) => isVisible && swipeIn(isEven)}
     ease-in forwards;
 `;
