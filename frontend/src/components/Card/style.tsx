@@ -10,13 +10,20 @@ const DISTANCE = '80rem';
 
 const swipeIn = (isEven: boolean) => keyframes`
     0% {
-        opacity: 0;
-        transform: translateX(${isEven ? DISTANCE : -DISTANCE});
+        transform: translateX(${isEven ? DISTANCE : `-${DISTANCE}`});
     }
     100% {
         transform: translateX(0);
-        opacity: 1;
     }
+`;
+
+const opacityIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 `;
 
 export const Wrapper = styled.div<Props>`
@@ -29,11 +36,10 @@ export const Wrapper = styled.div<Props>`
   margin-right: ${({ isEven }) => (isEven ? '10rem' : 0)};
   margin-left: ${({ isEven }) => (isEven ? 0 : '10rem')};
   margin-bottom: 3rem;
-  transform: translateX(
-    ${({ isEven }) => (isEven ? DISTANCE : `-${DISTANCE}`)}
-  );
+  opacity: 0;
   animation: 0.9s ${({ isVisible, isEven }) => isVisible && swipeIn(isEven)}
-    ease-in forwards;
+      ease-in,
+    1.5s ${({ isVisible }) => isVisible && opacityIn} linear forwards;
 `;
 
 export const LeftSide = styled.div`

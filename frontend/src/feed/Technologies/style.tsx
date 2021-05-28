@@ -6,7 +6,7 @@ type Props = {
   background?: string;
 };
 
-const CIRCLE_SIZE = '47rem';
+const CIRCLE_SIZE = '43rem';
 
 const LogoAnim = keyframes`
     0% {
