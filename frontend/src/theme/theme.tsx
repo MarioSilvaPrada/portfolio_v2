@@ -6,10 +6,11 @@ const theme = {
     S: '.9rem',
     M: '1.2rem',
     L: '1.8rem',
+    XL: '3rem',
   },
   dimensions: {
     marginPage: '1.5rem',
-    maxWidth: '23rem',
+    maxWidth: '80rem',
     borderRadius: '0.5rem',
   },
 };

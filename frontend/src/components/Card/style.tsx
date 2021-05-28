@@ -28,7 +28,7 @@ export const Wrapper = styled.div<Props>`
   justify-content: space-between;
   margin-right: ${({ isEven }) => (isEven ? '10rem' : 0)};
   margin-left: ${({ isEven }) => (isEven ? 0 : '10rem')};
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   transform: translateX(
     ${({ isEven }) => (isEven ? DISTANCE : `-${DISTANCE}`)}
   );

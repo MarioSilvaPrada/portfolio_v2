@@ -13,7 +13,7 @@ interface Props {
 }
 
 const Card: FC<Props> = ({ title, description, imageUrl, type, isEven }) => {
-  const [isVisble, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const { ref, inView } = useInView({
     threshold: 0,
   });
@@ -24,7 +24,7 @@ const Card: FC<Props> = ({ title, description, imageUrl, type, isEven }) => {
     }
   }, [inView]);
   return (
-    <S.Wrapper isEven={isEven} ref={ref} isVisible={isVisble}>
+    <S.Wrapper isEven={isEven} ref={ref} isVisible={isVisible}>
       <S.LeftSide>
         <S.TitleWrap>
           <S.Title>{title}</S.Title>

@@ -20,7 +20,7 @@ export const MainSquare = styled.div`
   padding: 2rem;
   border: 2px solid ${({ theme }) => theme.colors.main};
   border-radius: ${({ theme }) => theme.dimensions.borderRadius};
-  max-width: ${({ theme }) => theme.dimensions.maxWidth};
+  max-width: 25rem;
 `;
 
 export const Container = styled.div`

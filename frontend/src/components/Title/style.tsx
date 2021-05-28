@@ -5,4 +5,5 @@ export const StyledText = styled.h1`
   font-size: 4.5rem;
   color: white;
   text-align: center;
+  margin-bottom: 4rem;
 `;

@@ -1,12 +1,26 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
-export const Container = styled.div`
+type Props = {
+  isVisible: boolean;
+};
+
+const opacityAnim = keyframes`
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+`;
+
+export const Container = styled.div<Props>`
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   margin-bottom: 3rem;
+  animation: 2s ${({ isVisible }) => isVisible && opacityAnim} ease-out;
 `;
 
 export const Title = styled.div`
