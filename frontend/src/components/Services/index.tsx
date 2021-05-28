@@ -20,7 +20,7 @@ const Services = () => {
             <S.CatTitle>Code</S.CatTitle>
             <S.ListWrapper>
               {servicesOptions.map((text) => (
-                <S.Option>
+                <S.Option key={text}>
                   <S.Check />
                   <S.OptionText>{text}</S.OptionText>
                 </S.Option>
@@ -45,7 +45,7 @@ const Services = () => {
             <S.CatTitle>Design</S.CatTitle>
             <S.ListWrapper>
               {designOptions.map((text) => (
-                <S.Option>
+                <S.Option key={text}>
                   <S.Check />
                   <S.OptionText>{text}</S.OptionText>
                 </S.Option>

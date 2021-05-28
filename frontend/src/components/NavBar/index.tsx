@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import * as S from './style';
 
 import Logo from 'assets/Logo.svg';
@@ -22,8 +22,26 @@ const NavBar = () => {
       to: '/',
     },
   ];
+
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    document.addEventListener('scroll', function (e) {
+      const positionTop = document.documentElement.getBoundingClientRect().top;
+
+      if (positionTop < -30) {
+        setIsScrolled(true);
+        console.log(true);
+      } else {
+        setIsScrolled(false);
+        console.log(false);
+      }
+      // console.log('doc', document.documentElement.getBoundingClientRect().top);
+    });
+  }, []);
+
   return (
-    <S.Container>
+    <S.Container isScrolled={isScrolled}>
       <S.Logo src={Logo} />
       <S.LinkWrapper>
         {menuOptions.map(({ text, to }) => (

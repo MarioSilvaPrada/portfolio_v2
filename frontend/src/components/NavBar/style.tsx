@@ -1,20 +1,26 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-export const Container = styled.div`
-  padding: ${({ theme }) => theme.dimensions.marginPage};
+type Props = {
+  isScrolled: boolean;
+};
 
+export const Container = styled.div<Props>`
+  padding: ${({ theme }) => theme.dimensions.marginPage};
+  background: ${({ isScrolled }) => (isScrolled ? 'white' : 'transparent')};
   display: flex;
   align-items: center;
   position: fixed;
   width: 100%;
   z-index: 100;
-  transition: 1s;
+  transition: 0.7s;
+  color: ${({ isScrolled, theme }) =>
+    isScrolled ? theme.colors.main : 'white'};
 `;
 
 export const StyledLink = styled(Link)`
   margin-right: 2rem;
-  color: white;
+  font-size: 1.2rem;
 `;
 
 export const LinkWrapper = styled.div`
