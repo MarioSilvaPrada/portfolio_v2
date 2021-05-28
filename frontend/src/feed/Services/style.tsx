@@ -6,7 +6,7 @@ export const Square = styled.div`
   width: 12rem;
   height: 12rem;
   background: ${({ theme }) => theme.colors.main};
-  border-radius: 0.5rem;
+  border-radius: ${({ theme }) => theme.dimensions.borderRadius};
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,19 +19,20 @@ export const MainSquare = styled.div`
   background: rgba(0, 0, 0, 0.5);
   padding: 2rem;
   border: 2px solid ${({ theme }) => theme.colors.main};
-  border-radius: 0.5rem;
-  max-width: 24rem;
+  border-radius: ${({ theme }) => theme.dimensions.borderRadius};
+  max-width: ${({ theme }) => theme.dimensions.maxWidth};
 `;
 
 export const Container = styled.div`
   max-width: 80rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin: 4rem auto;
 `;
 
 export const Wrapper = styled.div`
-  margin-top: 2rem;
+  margin-top: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;

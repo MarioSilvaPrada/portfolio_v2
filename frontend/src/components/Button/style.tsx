@@ -7,6 +7,6 @@ export const Container = styled.button`
   font-family: GilroyBold;
   font-size: 2rem;
   color: white;
-  border-radius: 0.5rem;
+  border-radius: ${({ theme }) => theme.dimensions.borderRadius};
   cursor: pointer;
 `;

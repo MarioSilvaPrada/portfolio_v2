@@ -1,6 +1,7 @@
 import React from 'react';
 import * as S from './style';
 import Title from 'components/Title';
+import Paragraph from 'components/Paragraph';
 
 import { FaCodeBranch } from 'react-icons/fa';
 import { MdColorLens, MdLaptopMac, MdPhoneIphone } from 'react-icons/md';
@@ -12,6 +13,18 @@ const Services = () => {
     <>
       <Title>Services</Title>
       <S.Container>
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et
+          ultricies eros. Maecenas dolor metus, fringilla id sem non,
+          consectetur posuere ipsum. Donec vitae nisi tincidunt, auctor magna
+          at, vehicula nunc. Proin ornare tristique semper. Maecenas id ipsum a
+          tellus euismod accumsan. Sed nisl sapien, scelerisque sed eleifend
+          quis, vestibulum quis lectus. Nam lacus neque, varius ut ornare in,
+          volutpat non erat. Praesent pellentesque leo eget cursus eleifend. In
+          magna nunc, pellentesque eu pretium id, consequat sit amet quam.
+          Maecenas urna turpis, ornare at pellentesque tincidunt, viverra non
+          nibh. Nulla accumsan tellus ac eros pellentesque tempus.
+        </Paragraph>
         <S.Wrapper>
           <S.CatWrapper>
             <S.Square>
