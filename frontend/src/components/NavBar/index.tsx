@@ -25,18 +25,20 @@ const NavBar = () => {
 
   const [isScrolled, setIsScrolled] = useState(false);
 
+  const getIsScrolled = () => {
+    const positionTop = document.documentElement.getBoundingClientRect().top;
+    const triggerPosition = -30;
+
+    if (positionTop < triggerPosition) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
   useEffect(() => {
     document.addEventListener('scroll', function (e) {
-      const positionTop = document.documentElement.getBoundingClientRect().top;
-
-      if (positionTop < -30) {
-        setIsScrolled(true);
-        console.log(true);
-      } else {
-        setIsScrolled(false);
-        console.log(false);
-      }
-      // console.log('doc', document.documentElement.getBoundingClientRect().top);
+      getIsScrolled();
     });
   }, []);
 

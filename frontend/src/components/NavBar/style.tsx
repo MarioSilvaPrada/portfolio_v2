@@ -7,20 +7,20 @@ type Props = {
 
 export const Container = styled.div<Props>`
   padding: ${({ theme }) => theme.dimensions.marginPage};
-  background: ${({ isScrolled }) => (isScrolled ? 'white' : 'transparent')};
+  background: ${({ isScrolled }) =>
+    isScrolled ? 'rgba(0,0,0,0.7)' : 'transparent'};
   display: flex;
   align-items: center;
   position: fixed;
   width: 100%;
   z-index: 100;
   transition: 0.7s;
-  color: ${({ isScrolled, theme }) =>
-    isScrolled ? theme.colors.main : 'white'};
 `;
 
 export const StyledLink = styled(Link)`
   margin-right: 2rem;
   font-size: 1.2rem;
+  color: white;
 `;
 
 export const LinkWrapper = styled.div`
