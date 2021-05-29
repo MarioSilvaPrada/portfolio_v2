@@ -2,7 +2,6 @@ import React, { FC, useState, useEffect } from 'react';
 import * as S from './style';
 import { useInView } from 'react-intersection-observer';
 
-import Profile from 'assets/pic.png';
 import Button from 'components/Button';
 import Social from 'components/Social';
 
@@ -20,7 +19,9 @@ const Main: FC = () => {
   return (
     <S.Container ref={ref} isVisible={isVisible}>
       <S.ImageWrapper>
-        <S.ProfilePic src={Profile} />
+        <S.ProfilePic
+          src={'https://images-portfolio-v2.s3.eu-west-2.amazonaws.com/pic.png'}
+        />
       </S.ImageWrapper>
 
       <S.GreetingsWrapper>
