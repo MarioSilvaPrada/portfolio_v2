@@ -5,8 +5,6 @@ interface Props {
   children: string;
 }
 
-const Button: FC<Props> = ({ children }) => {
-  return <S.Container>{children}</S.Container>;
-};
+const Button: FC<Props> = ({ children }) => <S.Container>{children}</S.Container>;
 
 export default Button;

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import * as S from './style';
-
 import Logo from 'assets/Logo.svg';
+import * as S from './style';
 
 const NavBar = () => {
   const menuOptions = [
@@ -37,7 +36,7 @@ const NavBar = () => {
   };
 
   useEffect(() => {
-    document.addEventListener('scroll', function (e) {
+    document.addEventListener('scroll', () => {
       getIsScrolled();
     });
   }, []);

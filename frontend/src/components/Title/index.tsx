@@ -5,8 +5,6 @@ interface Props {
   children: string;
 }
 
-const Title: FC<Props> = ({ children }) => {
-  return <S.StyledText>{children}</S.StyledText>;
-};
+const Title: FC<Props> = ({ children }) => <S.StyledText>{children}</S.StyledText>;
 
 export default Title;

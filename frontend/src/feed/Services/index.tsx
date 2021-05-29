@@ -1,10 +1,10 @@
 import React from 'react';
-import * as S from './style';
 import Title from 'components/Title';
 import Paragraph from 'components/Paragraph';
 
 import { FaCodeBranch } from 'react-icons/fa';
 import { MdColorLens, MdLaptopMac, MdPhoneIphone } from 'react-icons/md';
+import * as S from './style';
 
 const Services = () => {
   const servicesOptions = ['Clean', 'Readable', 'Maintainable', 'Responsive'];

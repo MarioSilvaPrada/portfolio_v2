@@ -17,8 +17,8 @@ const root = (
     <Router>
       <NavBar />
       <Switch>
-        <Route exact path='/' component={App} />
-        <Route path='*' component={PageNotFound} />
+        <Route exact path="/" component={App} />
+        <Route path="*" component={PageNotFound} />
       </Switch>
     </Router>
   </ThemeProvider>

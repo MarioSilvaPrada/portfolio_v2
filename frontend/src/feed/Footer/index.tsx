@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
-import * as S from './style';
 import Title from 'components/Title';
 import Logo from 'assets/Logo.svg';
 
 import { socialOptions } from 'utils/social';
+import * as S from './style';
 
 const Footer: FC = () => {
   const myMail = 'mariosilvaprada@gmail.com';
@@ -18,7 +18,7 @@ const Footer: FC = () => {
         <S.StyledText>OR</S.StyledText>
         <S.SocialWrapper>
           {socialOptions.map(({ Icon, link }) => (
-            <S.IconWrapper key={link} href={link} target='blank'>
+            <S.IconWrapper key={link} href={link} target="blank">
               <Icon />
             </S.IconWrapper>
           ))}
@@ -26,7 +26,10 @@ const Footer: FC = () => {
         <S.FooterContainer>
           <S.StyledLogo src={Logo} />
           <S.Name>Mário Prada</S.Name>
-          <S.SmallText>Copyright © {YEAR}</S.SmallText>
+          <S.SmallText>
+            Copyright ©
+            {YEAR}
+          </S.SmallText>
         </S.FooterContainer>
       </S.Container>
     </>

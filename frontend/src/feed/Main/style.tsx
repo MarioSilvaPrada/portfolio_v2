@@ -13,7 +13,7 @@ const opacityAnim = keyframes`
     }
 `;
 
-export const Container = styled.div<Props>`
+export const Container = styled.div < Props > `
   height: 100vh;
   display: flex;
   justify-content: center;

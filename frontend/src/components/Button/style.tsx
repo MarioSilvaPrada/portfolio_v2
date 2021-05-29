@@ -10,3 +10,5 @@ export const Container = styled.button`
   border-radius: ${({ theme }) => theme.dimensions.borderRadius};
   cursor: pointer;
 `;
+
+export const Text = styled.p``;

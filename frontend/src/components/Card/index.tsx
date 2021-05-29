@@ -1,8 +1,8 @@
 import React, { FC, useState, useEffect } from 'react';
-import * as S from './style';
 import { useInView } from 'react-intersection-observer';
 
 import { MdLaptopMac, MdPhoneIphone } from 'react-icons/md';
+import * as S from './style';
 
 interface Props {
   title: string;
@@ -12,7 +12,9 @@ interface Props {
   isEven: boolean;
 }
 
-const Card: FC<Props> = ({ title, description, imageUrl, type, isEven }) => {
+const Card: FC<Props> = ({
+  title, description, imageUrl, type, isEven,
+}) => {
   const [isVisible, setIsVisible] = useState(false);
   const { ref, inView } = useInView({
     threshold: 0,

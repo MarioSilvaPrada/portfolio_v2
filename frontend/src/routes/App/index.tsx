@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
+import {
+  Services, Portfolio, Main, Technologies, Footer,
+} from 'feed';
 import * as S from './style';
-
-import { Services, Portfolio, Main, Technologies, Footer } from 'feed';
 
 const App: FC = () => (
   <S.StyledBody>

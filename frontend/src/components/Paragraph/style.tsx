@@ -5,3 +5,5 @@ export const StyledParagraph = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.M};
   line-height: 2rem;
 `;
+
+export const Text = styled.p``;

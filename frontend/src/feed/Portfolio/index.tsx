@@ -1,8 +1,8 @@
 import React from 'react';
-import * as S from './style';
 
 import Title from 'components/Title';
 import Card from 'components/Card';
+import * as S from './style';
 
 const Portfolio = () => {
   const data = [
@@ -43,14 +43,16 @@ const Portfolio = () => {
     <>
       <Title>Portfolio</Title>
       <S.Container>
-        {data.map(({ title, imageUrl, type, description }, i) => (
+        {data.map(({
+          title, imageUrl, type, description,
+        }, i) => (
           <Card
             key={title}
             title={title}
             imageUrl={imageUrl}
             type={type}
             description={description}
-            isEven={i % 2 == 0}
+            isEven={i % 2 === 0}
           />
         ))}
       </S.Container>

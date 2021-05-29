@@ -1,5 +1,4 @@
 import React, { FC, useState, useEffect } from 'react';
-import * as S from './style';
 import { useInView } from 'react-intersection-observer';
 
 import Title from 'components/Title';
@@ -10,6 +9,7 @@ import ReduxLogo from 'assets/images/technologies/redux_logo.png';
 import TSLogo from 'assets/images/technologies/ts_logo.png';
 import RestLogo from 'assets/images/technologies/rest_logo.png';
 import DjangoLogo from 'assets/images/technologies/django_logo.png';
+import * as S from './style';
 
 const Technologies: FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -88,7 +88,7 @@ const Technologies: FC = () => {
                 right: '10rem',
                 animationDelay: getRandomTime(),
               }}
-              background='white'
+              background="white"
             />
           </S.Circle>
         </S.ToolsWrapper>

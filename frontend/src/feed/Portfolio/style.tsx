@@ -7,3 +7,5 @@ export const Container = styled.div`
   justify-content: center;
   margin: 4rem auto 1rem;
 `;
+
+export const Text = styled.p``;

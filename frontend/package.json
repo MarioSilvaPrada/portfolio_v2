@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production",
-    "lint": "eslint --ext .jsx --ext .js --fix ./src"
+    "lint": "eslint --ext .jsx --ext .tsx --ext .js --fix ./src"
   },
   "husky": {
     "hooks": {
@@ -27,6 +27,7 @@
     "react-dom": "^16.13.1",
     "react-icons": "^3.10.0",
     "react-intersection-observer": "^8.32.0",
+    "react-lazy-images": "^1.1.0",
     "react-router-dom": "^5.2.0",
     "styled-components": "^5.1.1"
   },

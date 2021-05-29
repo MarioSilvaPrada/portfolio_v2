@@ -26,7 +26,7 @@ const opacityIn = keyframes`
   }
 `;
 
-export const Wrapper = styled.div<Props>`
+export const Wrapper = styled.div < Props > `
   background: white;
   padding: 2rem;
   border-radius: ${({ theme }) => theme.dimensions.borderRadius};
@@ -61,7 +61,7 @@ export const Title = styled.h1`
   margin-right: 1rem;
 `;
 
-export const StyledImage = styled.div<Props>`
+export const StyledImage = styled.div < Props > `
   width: 26rem;
   height: 23rem;
   background-image: url(${({ imageUrl }) => imageUrl});
