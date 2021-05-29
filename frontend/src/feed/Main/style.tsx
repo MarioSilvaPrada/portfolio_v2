@@ -13,7 +13,7 @@ const opacityAnim = keyframes`
     }
 `;
 
-export const Container = styled.div < Props > `
+export const Container = styled.div<Props>`
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -35,6 +35,7 @@ export const ImageWrapper = styled.div`
 
 export const ProfilePic = styled.img`
   width: 55rem;
+  animation: 2s ${opacityAnim} ease-out;
 `;
 
 export const GreetingsWrapper = styled.div`
