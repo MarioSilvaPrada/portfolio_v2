@@ -37,7 +37,7 @@ export const Wrapper = styled.div<Props>`
   margin-left: ${({ isEven }) => (isEven ? 0 : '10rem')};
   margin-bottom: 3rem;
   opacity: 0;
-  animation: 0.9s ${({ isVisible, isEven }) => isVisible && swipeIn(isEven)}
+  animation: 1s ${({ isVisible, isEven }) => isVisible && swipeIn(isEven)}
       ease-in,
     1.5s ${({ isVisible }) => isVisible && opacityIn} linear forwards;
 `;
