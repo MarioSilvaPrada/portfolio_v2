@@ -19,6 +19,7 @@ module.exports = {
       assets: path.resolve(__dirname, './src/assets'),
       theme: path.resolve(__dirname, './src/theme'),
       feed: path.resolve(__dirname, './src/feed'),
+      utils: path.resolve(__dirname, './src/utils'),
     },
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.css'],
   },

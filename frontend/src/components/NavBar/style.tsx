@@ -8,7 +8,7 @@ type Props = {
 export const Container = styled.div<Props>`
   padding: ${({ theme }) => theme.dimensions.marginPage};
   background: ${({ isScrolled }) =>
-    isScrolled ? 'rgba(0,0,0,0.7)' : 'transparent'};
+    isScrolled ? 'rgba(0,0,0,0.8)' : 'transparent'};
   display: flex;
   align-items: center;
   position: fixed;
