@@ -18,7 +18,7 @@ const Footer: FC = () => {
         <S.StyledText>OR</S.StyledText>
         <S.SocialWrapper>
           {socialOptions.map(({ Icon, link }) => (
-            <S.IconWrapper href={link} target='blank'>
+            <S.IconWrapper key={link} href={link} target='blank'>
               <Icon />
             </S.IconWrapper>
           ))}

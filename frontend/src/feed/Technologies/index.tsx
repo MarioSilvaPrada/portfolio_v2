@@ -21,7 +21,6 @@ const Technologies: FC = () => {
     const max = 1;
     const min = 0;
     const rndInt = Math.random() * (max - min + 1) + min;
-    console.log(rndInt);
 
     return `${rndInt}s`;
   };
