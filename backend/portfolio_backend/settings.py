@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+# docker-compose exec app python manage.py makemigrations core
+
 from pathlib import Path
 import os
 
