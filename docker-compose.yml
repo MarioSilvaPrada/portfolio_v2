@@ -13,6 +13,8 @@ services:
       - DB_USER=postgres
       - DB_PASS=supersecretpassword
       - DEBUG=1
+      - AWS_ACCESS_KEY_ID=AKIAXNEQY35GQSZ3WWFD
+      - AWS_SECRET_ACCESS_KEY=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
     depends_on:
       - db
   db:

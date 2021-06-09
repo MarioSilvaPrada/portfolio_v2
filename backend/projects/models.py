@@ -6,7 +6,7 @@ def project_image(instance, filename):
     ext = filename.split('.')[-1]
     filename = f'{uuid.uuid4()}.{ext}'
 
-    return os.path.join('images/', filename)
+    return os.path.join('projects/', filename)
 
 
 class Project(models.Model):
