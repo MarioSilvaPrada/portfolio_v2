@@ -29,7 +29,7 @@ SECRET_KEY = '5cm3t*3_-o#hjniuoy*n4)vo92&&io5s3-m)h4@r91&a&$se96'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['portfolio-mariosilvaprada.herokuapp.com']
 
 
 # Application definition
@@ -163,5 +163,5 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Heroku
-db_from_env = dj_database_url.config(conn_max_age=500) 
+db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
