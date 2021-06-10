@@ -6,7 +6,7 @@ services:
       - 8000:8000
     volumes:
       - ./backend:/backend
-    command: gunicorn woodie_api.wsgi -b 0.0.0.0:8000
+    command: gunicorn portfolio_backend.wsgi -b 0.0.0.0:8000
     environment:
       - DB_HOST=db
       - DB_NAME=app
