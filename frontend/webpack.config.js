@@ -20,6 +20,7 @@ module.exports = {
       theme: path.resolve(__dirname, './src/theme'),
       feed: path.resolve(__dirname, './src/feed'),
       utils: path.resolve(__dirname, './src/utils'),
+      api: path.resolve(__dirname, './src/api'),
     },
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.css'],
   },

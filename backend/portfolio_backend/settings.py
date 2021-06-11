@@ -29,7 +29,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['portfolio-mariosilvaprada.herokuapp.com']
+ALLOWED_HOSTS = ['portfolio-mariosilvaprada.herokuapp.com',
+                 'localhost', '127.0.0.1']
 
 if DEBUG == 0:
     SECURE_BROWSER_XSS_FILTER = True
