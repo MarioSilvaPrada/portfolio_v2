@@ -1,5 +1,7 @@
 import React, { FC, useEffect, useState } from 'react';
-import { Services, Portfolio, Main, Technologies, Footer } from 'feed';
+import {
+  Services, Portfolio, Main, Technologies, Footer,
+} from 'feed';
 import { getProjects } from 'api/projects';
 import * as S from './style';
 
@@ -25,7 +27,6 @@ const App: FC = () => {
     getMyProjects();
   }, []);
 
-  console.log(projects);
   return (
     <S.StyledBody>
       <Main />

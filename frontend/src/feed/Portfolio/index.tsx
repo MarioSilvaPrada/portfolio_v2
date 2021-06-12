@@ -14,24 +14,24 @@ interface Props {
   }>;
 }
 
-const Portfolio: FC<Props> = ({ projects }) => {
-  return (
-    <>
-      <Title>Portfolio</Title>
-      <S.Container>
-        {projects.map(({ title, image, type, description }, i) => (
-          <Card
-            key={title}
-            title={title}
-            imageUrl={image}
-            type={type}
-            description={description}
-            isEven={i % 2 === 0}
-          />
-        ))}
-      </S.Container>
-    </>
-  );
-};
+const Portfolio: FC<Props> = ({ projects }) => (
+  <>
+    <Title>Portfolio</Title>
+    <S.Container>
+      {projects.map(({
+        title, image, type, description,
+      }, i) => (
+        <Card
+          key={title}
+          title={title}
+          imageUrl={image}
+          type={type}
+          description={description}
+          isEven={i % 2 === 0}
+        />
+      ))}
+    </S.Container>
+  </>
+);
 
 export default Portfolio;
