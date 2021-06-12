@@ -1,7 +1,7 @@
 import api from 'api';
+import axios from 'axios';
 
 const getProjects = async () => {
-  console.log({ teste: process.env.PROJECTS });
   try {
     const res = await api.get(process.env.PROJECTS);
     console.log({ res });

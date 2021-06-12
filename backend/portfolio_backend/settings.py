@@ -58,6 +58,7 @@ INSTALLED_APPS = [
     # 3rd party
     'rest_framework',
     'whitenoise.runserver_nostatic',
+    'corsheaders',
 
     # Local
     'projects'
@@ -66,6 +67,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -73,6 +75,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
+
+
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:9000',
+    'http://localhost:8000',
+)
 
 ROOT_URLCONF = 'portfolio_backend.urls'
 
