@@ -31,14 +31,16 @@ const Talks: FC<Props> = () => {
     <S.Container>
       <Title>Talks</Title>
       <S.TalksWrapper>
-        {data.map(({ title, date, company, link }, i) => (
+        {data.map(({
+          title, date, company, link,
+        }, i) => (
           <S.Row>
             <S.StyledDate>{date}</S.StyledDate>
             <S.GitWrapper>
               <S.GitBullet />
               {data.length !== i + 1 && <S.GitLine />}
             </S.GitWrapper>
-            <S.IconWrapper href={link} target='blank'>
+            <S.IconWrapper href={link} target="blank">
               <BiLinkAlt />
             </S.IconWrapper>
             <S.Column>
