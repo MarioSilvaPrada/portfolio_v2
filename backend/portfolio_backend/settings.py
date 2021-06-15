@@ -35,6 +35,7 @@ ALLOWED_HOSTS = ['portfolio-mariosilvaprada.herokuapp.com',
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:9000',
     'http://localhost:8000',
+    'https://keen-swartz-41fddd.netlify.app'
 )
 
 if DEBUG == 0:
