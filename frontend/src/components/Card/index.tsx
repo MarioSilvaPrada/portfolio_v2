@@ -12,7 +12,9 @@ interface Props {
   isEven: boolean;
 }
 
-const Card: FC<Props> = ({ title, description, imageUrl, type, isEven }) => {
+const Card: FC<Props> = ({
+  title, description, imageUrl, type, isEven,
+}) => {
   const [isVisible, setIsVisible] = useState(false);
   const { ref, inView } = useInView({
     threshold: 0,
