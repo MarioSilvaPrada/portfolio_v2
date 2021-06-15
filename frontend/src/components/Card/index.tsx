@@ -25,7 +25,6 @@ const Card: FC<Props> = ({
       setIsVisible(true);
     }
   }, [inView]);
-  console.log({ type });
   return (
     <S.Wrapper isEven={isEven} ref={ref} isVisible={isVisible}>
       <S.LeftSide>
