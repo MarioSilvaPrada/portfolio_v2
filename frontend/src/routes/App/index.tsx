@@ -18,18 +18,21 @@ const App: FC = () => {
       setProjects(res.data);
     }
   };
-
   const getMyTalks = async () => {
     const res = await getTalks();
 
     if (res.status === 200) {
       setTalks(res.data);
     }
+  };
+
+  const getAllData = async () => {
+    await getMyProjects();
+    await getMyTalks();
     setIsLoading(false);
   };
   useEffect(() => {
-    getMyProjects();
-    getMyTalks();
+    getAllData();
   }, []);
 
   return isLoading ? (
