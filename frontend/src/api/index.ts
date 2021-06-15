@@ -1,7 +1,9 @@
 import axios from 'axios';
 
-export const PRODUCTION = false;
+export const PRODUCTION = true;
 
 export default axios.create({
-  baseURL: PRODUCTION ? process.env.API_URL : process.env.API_STAGING_URL,
+  baseURL: PRODUCTION
+    ? 'https://portfolio-mariosilvaprada.herokuapp.com/'
+    : process.env.API_STAGING_URL,
 });

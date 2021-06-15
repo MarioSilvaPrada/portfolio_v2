@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const getProjects = async () => {
   try {
-    const res = await api.get(process.env.PROJECTS);
+    const res = await api.get('api/projects/');
     return res;
   } catch (err) {
     return err.response;

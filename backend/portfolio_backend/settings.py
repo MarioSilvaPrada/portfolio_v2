@@ -29,14 +29,12 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['portfolio-mariosilvaprada.herokuapp.com', 
-                'keen-swartz-41fddd.netlify.app',
+ALLOWED_HOSTS = ['portfolio-mariosilvaprada.herokuapp.com',
                  'localhost', '127.0.0.1']
 
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:9000',
     'http://localhost:8000',
-    'https://keen-swartz-41fddd.netlify.app'
 )
 
 if DEBUG == 0:
