@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useState } from 'react';
 import {
-  Services, Portfolio, Main, Technologies, Footer,
+  Services, Portfolio, Main, Technologies, Talks, Footer,
 } from 'feed';
 import { getProjects } from 'api/projects';
 import * as S from './style';
@@ -35,6 +35,7 @@ const App: FC = () => {
       <Services />
       <Portfolio projects={projects} />
       <Technologies />
+      <Talks />
       <Footer />
     </S.StyledBody>
   );

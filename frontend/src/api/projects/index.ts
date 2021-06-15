@@ -3,7 +3,6 @@ import axios from 'axios';
 
 const getProjects = async () => {
   try {
-    console.log({ env: process.env });
     const res = await api.get('api/projects/');
     return res;
   } catch (err) {
