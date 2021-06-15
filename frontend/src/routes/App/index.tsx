@@ -19,6 +19,8 @@ const App: FC = () => {
   const getMyProjects = async () => {
     const res = await getProjects();
 
+    console.log({res})
+
     if (res.status === 200) {
       setProjects(res.data);
     }
