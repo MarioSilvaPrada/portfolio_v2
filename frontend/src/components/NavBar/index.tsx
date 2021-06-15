@@ -17,6 +17,10 @@ const NavBar = () => {
       to: '/',
     },
     {
+      text: 'Talks',
+      to: '/',
+    },
+    {
       text: 'Contacts',
       to: '/',
     },

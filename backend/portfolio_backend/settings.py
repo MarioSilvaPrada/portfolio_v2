@@ -32,6 +32,11 @@ DEBUG = True
 ALLOWED_HOSTS = ['portfolio-mariosilvaprada.herokuapp.com',
                  'localhost', '127.0.0.1']
 
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:9000',
+    'http://localhost:8000',
+)
+
 if DEBUG == 0:
     SECURE_BROWSER_XSS_FILTER = True
     X_FRAME_OPTIONS = 'DENY'
@@ -76,11 +81,6 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-
-CORS_ORIGIN_WHITELIST = (
-    'http://localhost:9000',
-    'http://localhost:8000',
-)
 
 ROOT_URLCONF = 'portfolio_backend.urls'
 
