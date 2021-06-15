@@ -67,7 +67,8 @@ INSTALLED_APPS = [
     'corsheaders',
 
     # Local
-    'projects'
+    'projects',
+    'talks',
 ]
 
 MIDDLEWARE = [

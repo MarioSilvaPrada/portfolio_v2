@@ -25,10 +25,12 @@ export const GitLine = styled.div`
 
 export const Row = styled.div`
   display: flex;
+  position: relative;
+  margin-left: 15rem;
 `;
 
 export const TalksWrapper = styled.div`
-  max-width: 30rem;
+  max-width: ${({ theme }) => theme.dimensions.maxWidth};
   margin: 0 auto;
 `;
 
@@ -36,7 +38,9 @@ export const StyledDate = styled.p`
   color: white;
   font-size: ${({ theme }) => theme.fontSizes.S};
   transform: rotate(-10deg);
-  margin-top: 15px;
+  position: absolute;
+  left: -4rem;
+  top: 0.5rem;
 `;
 
 export const Text = styled.p`

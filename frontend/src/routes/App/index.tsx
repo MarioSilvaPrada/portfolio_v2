@@ -1,18 +1,15 @@
 import React, { FC, useEffect, useState } from 'react';
-import { Services, Portfolio, Main, Technologies, Talks, Footer } from 'feed';
+import {
+  Services, Portfolio, Main, Technologies, Talks, Footer,
+} from 'feed';
 import { getProjects } from 'api/projects';
+import { getTalks } from 'api/talks';
+import { ITalks, IProjects } from 'utils/interface';
 import * as S from './style';
 
-type Projects = {
-  description: string;
-  id: number;
-  image: string;
-  title: string;
-  type: string;
-};
-
 const App: FC = () => {
-  const [projects, setProjects] = useState<Array<Projects>>([]);
+  const [projects, setProjects] = useState<Array<IProjects>>([]);
+  const [talks, setTalks] = useState<Array<ITalks>>([]);
 
   const getMyProjects = async () => {
     const res = await getProjects();
@@ -21,8 +18,17 @@ const App: FC = () => {
       setProjects(res.data);
     }
   };
+
+  const getMyTalks = async () => {
+    const res = await getTalks();
+
+    if (res.status === 200) {
+      setTalks(res.data);
+    }
+  };
   useEffect(() => {
     getMyProjects();
+    getMyTalks();
   }, []);
 
   return (
@@ -31,7 +37,7 @@ const App: FC = () => {
       <Services />
       <Portfolio projects={projects} />
       <Technologies />
-      <Talks />
+      <Talks talks={talks} />
       <Footer />
     </S.StyledBody>
   );
