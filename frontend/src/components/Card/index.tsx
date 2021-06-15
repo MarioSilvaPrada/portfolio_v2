@@ -12,9 +12,7 @@ interface Props {
   isEven: boolean;
 }
 
-const Card: FC<Props> = ({
-  title, description, imageUrl, type, isEven,
-}) => {
+const Card: FC<Props> = ({ title, description, imageUrl, type, isEven }) => {
   const [isVisible, setIsVisible] = useState(false);
   const { ref, inView } = useInView({
     threshold: 0,
@@ -25,13 +23,14 @@ const Card: FC<Props> = ({
       setIsVisible(true);
     }
   }, [inView]);
+  console.log({ type });
   return (
     <S.Wrapper isEven={isEven} ref={ref} isVisible={isVisible}>
       <S.LeftSide>
         <S.TitleWrap>
           <S.Title>{title}</S.Title>
           <S.IconContainer>
-            {type === 'mobile' ? <MdPhoneIphone /> : <MdLaptopMac />}
+            {type === 'Mobile' ? <MdPhoneIphone /> : <MdLaptopMac />}
           </S.IconContainer>
         </S.TitleWrap>
         <S.Paragraph>{description}</S.Paragraph>
