@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  max-width: 80rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 4rem auto 1rem;
+
+  div:not(:last-child) {
+    margin-bottom: 3rem;
+  }
 `;
 
 export const Text = styled.p``;

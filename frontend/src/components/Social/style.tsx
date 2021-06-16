@@ -17,6 +17,7 @@ export const StyledIcon = styled.a`
   transition: 0.5s;
 
   &:hover {
-    transform: translateX(-0.6rem);
+    transform: scale(1.1);
+    color: ${({ color }) => color};
   }
 `;

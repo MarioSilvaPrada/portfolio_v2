@@ -32,9 +32,6 @@ export const Container = styled.div < Props > `
   justify-content: center;
   align-items: center;
   animation: 2s ${({ isVisible }) => isVisible && opacityAnim} ease-out;
-  max-width: ${({ theme }) => theme.dimensions.maxWidth};
-  margin: 0 auto;
-  margin-bottom: 3rem;
 `;
 
 export const ToolsWrapper = styled.div`

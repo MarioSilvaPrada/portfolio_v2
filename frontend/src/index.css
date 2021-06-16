@@ -5,7 +5,8 @@
 
 @font-face {
   font-family: 'GilroyBold';
-  src: local('GilroyBold'), url(./assets/fonts/Gilroy-ExtraBold.otf) format('truetype');
+  src: local('GilroyBold'),
+    url(./assets/fonts/Gilroy-ExtraBold.otf) format('truetype');
 }
 
 * {
@@ -24,10 +25,17 @@ h3 {
   font-family: 'GilroyBold';
 }
 
+html,
+body {
+  overscroll-behavior: none;
+}
+
 body {
   margin: 0;
   font-family: 'Gilroy', sans-serif;
   background: linear-gradient(90deg, #485363 0.63%, #29323c 100%);
+  max-height: 100%;
+  overflow: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

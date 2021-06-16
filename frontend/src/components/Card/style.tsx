@@ -35,7 +35,6 @@ export const Wrapper = styled.div < Props > `
   justify-content: space-between;
   margin-right: ${({ isEven }) => (isEven ? '10rem' : 0)};
   margin-left: ${({ isEven }) => (isEven ? 0 : '10rem')};
-  margin-bottom: 3rem;
   opacity: 0;
   animation: 1s ${({ isVisible, isEven }) => isVisible && swipeIn(isEven)}
       ease-in,

@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
-import Title from 'components/Title';
-import { BiLinkAlt } from 'react-icons/bi';
+import Layout from 'components/Layout';
 
+import { BiLinkAlt } from 'react-icons/bi';
 import { ITalks } from 'utils/interface';
 
 import * as S from './style';
@@ -32,33 +32,34 @@ const Talks: FC<Props> = ({ talks }) => {
     return `${datesArr[month]} ${year}`;
   };
   return (
-    <S.Container>
-      <Title>Talks</Title>
-      <S.TalksWrapper>
-        {talks
-          .sort(
-            (a, b) => new Date(a.date).valueOf() - new Date(b.date).valueOf(),
-          )
-          .map(({
-            title, date, company, link, id,
-          }, i) => (
-            <S.Row key={id}>
-              <S.StyledDate>{getDateString(date)}</S.StyledDate>
-              <S.GitWrapper>
-                <S.GitBullet />
-                {talks.length !== i + 1 && <S.GitLine />}
-              </S.GitWrapper>
-              <S.IconWrapper href={link} target="blank">
-                <BiLinkAlt />
-              </S.IconWrapper>
-              <S.Column>
-                <S.Text>{title}</S.Text>
-                <S.Company>{company}</S.Company>
-              </S.Column>
-            </S.Row>
-          ))}
-      </S.TalksWrapper>
-    </S.Container>
+    <Layout title="Talks">
+      <S.Container>
+        <S.TalksWrapper>
+          {talks
+            .sort(
+              (a, b) => new Date(a.date).valueOf() - new Date(b.date).valueOf(),
+            )
+            .map(({
+              title, date, company, link, id,
+            }, i) => (
+              <S.Row key={id}>
+                <S.StyledDate>{getDateString(date)}</S.StyledDate>
+                <S.GitWrapper>
+                  <S.GitBullet />
+                  {talks.length !== i + 1 && <S.GitLine />}
+                </S.GitWrapper>
+                <S.IconWrapper href={link} target="blank">
+                  <BiLinkAlt />
+                </S.IconWrapper>
+                <S.Column>
+                  <S.Text>{title}</S.Text>
+                  <S.Company>{company}</S.Company>
+                </S.Column>
+              </S.Row>
+            ))}
+        </S.TalksWrapper>
+      </S.Container>
+    </Layout>
   );
 };
 

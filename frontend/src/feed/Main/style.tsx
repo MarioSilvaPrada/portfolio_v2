@@ -19,7 +19,6 @@ export const Container = styled.div < Props > `
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-bottom: 3rem;
   animation: 2s ${({ isVisible }) => isVisible && opacityAnim} ease-out;
 `;
 

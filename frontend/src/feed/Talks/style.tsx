@@ -18,7 +18,7 @@ export const GitBullet = styled.div`
 `;
 
 export const GitLine = styled.div`
-  width: 0.2rem;
+  width: 0.3rem;
   height: 5rem;
   background: ${({ theme }) => theme.colors.main};
 `;
@@ -29,10 +29,7 @@ export const Row = styled.div`
   margin-left: 15rem;
 `;
 
-export const TalksWrapper = styled.div`
-  max-width: ${({ theme }) => theme.dimensions.maxWidth};
-  margin: 0 auto;
-`;
+export const TalksWrapper = styled.div``;
 
 export const StyledDate = styled.p`
   color: white;

@@ -1,8 +1,8 @@
 import React, { FC, useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
-import Title from 'components/Title';
 import Paragraph from 'components/Paragraph';
+import Layout from 'components/Layout';
 
 import ReactLogo from 'assets/images/technologies/react_logo.png';
 import ReduxLogo from 'assets/images/technologies/redux_logo.png';
@@ -31,8 +31,7 @@ const Technologies: FC = () => {
     }
   }, [inView]);
   return (
-    <>
-      <Title>Technologies</Title>
+    <Layout title="Technologies">
       <S.Container ref={ref} isVisible={isVisible}>
         <Paragraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et
@@ -93,7 +92,7 @@ const Technologies: FC = () => {
           </S.Circle>
         </S.ToolsWrapper>
       </S.Container>
-    </>
+    </Layout>
   );
 };
 

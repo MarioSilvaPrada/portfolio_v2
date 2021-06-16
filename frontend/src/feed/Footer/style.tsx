@@ -5,10 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: ${({ theme }) => theme.dimensions.maxWidth};
-  margin: 0 auto;
   margin-bottom: 3rem;
-  margin-top: 10rem;
 `;
 
 export const StyledText = styled.p`
@@ -37,6 +34,11 @@ export const IconWrapper = styled.a`
   color: ${({ theme }) => theme.colors.main};
   font-size: ${({ theme }) => theme.fontSizes.XL};
   cursor: pointer;
+  transition: 0.5s;
+
+  &: hover {
+    color: ${({ color }) => color};
+  }
 `;
 
 export const FooterContainer = styled.div`

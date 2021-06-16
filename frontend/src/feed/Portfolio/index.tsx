@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
-
-import Title from 'components/Title';
 import Card from 'components/Card';
+import Layout from 'components/Layout';
 import * as S from './style';
 
 interface Props {
@@ -15,8 +14,7 @@ interface Props {
 }
 
 const Portfolio: FC<Props> = ({ projects }) => (
-  <>
-    <Title>Portfolio</Title>
+  <Layout title="Portfolio">
     <S.Container>
       {projects.map(({
         title, image, type, description,
@@ -31,7 +29,7 @@ const Portfolio: FC<Props> = ({ projects }) => (
         />
       ))}
     </S.Container>
-  </>
+  </Layout>
 );
 
 export default Portfolio;

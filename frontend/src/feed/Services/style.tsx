@@ -28,7 +28,6 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 4rem auto;
 `;
 
 export const Wrapper = styled.div`
