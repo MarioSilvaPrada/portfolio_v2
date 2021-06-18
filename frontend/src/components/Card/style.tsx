@@ -4,6 +4,8 @@ type Props = {
   imageUrl?: string;
   isEven?: boolean;
   isVisible?: boolean;
+  isImageScaled?: boolean;
+  index?: number;
 };
 
 const DISTANCE = '80rem';
@@ -26,7 +28,7 @@ const opacityIn = keyframes`
   }
 `;
 
-export const Wrapper = styled.div < Props > `
+export const Wrapper = styled.div<Props>`
   background: white;
   padding: 2rem;
   border-radius: ${({ theme }) => theme.dimensions.borderRadius};
@@ -39,6 +41,8 @@ export const Wrapper = styled.div < Props > `
   animation: 1s ${({ isVisible, isEven }) => isVisible && swipeIn(isEven)}
       ease-in,
     1.5s ${({ isVisible }) => isVisible && opacityIn} linear forwards;
+  position: relative;
+  z-index: ${({ isImageScaled }) => (isImageScaled ? 1 : 0)};
 `;
 
 export const LeftSide = styled.div`
@@ -60,13 +64,14 @@ export const Title = styled.h1`
   margin-right: 1rem;
 `;
 
-export const StyledImage = styled.div < Props > `
-  width: 26rem;
-  height: 23rem;
-  background-image: url(${({ imageUrl }) => imageUrl});
-  background-size: cover;
-  background-position: center;
+export const StyledImage = styled.img<Props>`
+  width: 28rem;
   border-radius: ${({ theme }) => theme.dimensions.borderRadius};
+  background-color: white;
+  cursor: pointer;
+  transform: ${({ isImageScaled }) =>
+    isImageScaled ? 'scale(2.5) translateX(-25%)' : 'scale(1) translateX(0)'};
+  transition: 0.5s;
 `;
 
 export const IconContainer = styled.div`

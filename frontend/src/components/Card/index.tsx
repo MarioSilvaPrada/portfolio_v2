@@ -10,6 +10,7 @@ interface Props {
   imageUrl: string;
   type: string;
   isEven: boolean;
+  index: number;
 }
 
 const Card: FC<Props> = ({
@@ -20,13 +21,20 @@ const Card: FC<Props> = ({
     threshold: 0,
   });
 
+  const [isImageScaled, setIsImageScaled] = useState<boolean>(false);
+
   useEffect(() => {
     if (inView) {
       setIsVisible(true);
     }
   }, [inView]);
   return (
-    <S.Wrapper isEven={isEven} ref={ref} isVisible={isVisible}>
+    <S.Wrapper
+      isEven={isEven}
+      ref={ref}
+      isVisible={isVisible}
+      isImageScaled={isImageScaled}
+    >
       <S.LeftSide>
         <S.TitleWrap>
           <S.Title>{title}</S.Title>
@@ -36,7 +44,11 @@ const Card: FC<Props> = ({
         </S.TitleWrap>
         <S.Paragraph>{description}</S.Paragraph>
       </S.LeftSide>
-      <S.StyledImage imageUrl={imageUrl} />
+      <S.StyledImage
+        src={imageUrl}
+        isImageScaled={isImageScaled}
+        onClick={() => setIsImageScaled(!isImageScaled)}
+      />
     </S.Wrapper>
   );
 };
