@@ -28,7 +28,7 @@ const opacityIn = keyframes`
   }
 `;
 
-export const Wrapper = styled.div<Props>`
+export const Wrapper = styled.div < Props > `
   background: white;
   padding: 2rem;
   border-radius: ${({ theme }) => theme.dimensions.borderRadius};
@@ -64,13 +64,12 @@ export const Title = styled.h1`
   margin-right: 1rem;
 `;
 
-export const StyledImage = styled.img<Props>`
+export const StyledImage = styled.img < Props > `
   width: 28rem;
   border-radius: ${({ theme }) => theme.dimensions.borderRadius};
   background-color: white;
   cursor: pointer;
-  transform: ${({ isImageScaled }) =>
-    isImageScaled ? 'scale(2.5) translateX(-25%)' : 'scale(1) translateX(0)'};
+  transform: ${({ isImageScaled }) => (isImageScaled ? 'scale(2.5) translateX(-25%)' : 'scale(1) translateX(0)')};
   transition: 0.5s;
 `;
 
