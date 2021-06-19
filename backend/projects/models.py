@@ -2,6 +2,7 @@ from django.db import models
 import uuid
 import os
 
+
 def project_image(instance, filename):
     ext = filename.split('.')[-1]
     filename = f'{uuid.uuid4()}.{ext}'
@@ -20,3 +21,4 @@ class Project(models.Model):
         ]
     )
     image = models.ImageField(null=True, upload_to=project_image)
+    link = models.URLField(max_length=128, null=True, blank=True)
