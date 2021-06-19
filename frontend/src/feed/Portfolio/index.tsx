@@ -1,17 +1,19 @@
 import React, { FC } from 'react';
 import Card from 'components/Card';
 import Layout from 'components/Layout';
-import * as S from './style';
 import { IProjects } from 'utils/interface';
+import * as S from './style';
 
 interface Props {
   projects: Array<IProjects>;
 }
 
 const Portfolio: FC<Props> = ({ projects }) => (
-  <Layout title='Portfolio' id='portfolio'>
+  <Layout title="Portfolio" id="portfolio">
     <S.Container>
-      {projects.map(({ title, image, type, description, link }, i) => (
+      {projects.map(({
+        title, image, type, description, link,
+      }, i) => (
         <Card
           key={title}
           title={title}
