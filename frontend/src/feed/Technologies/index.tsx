@@ -31,7 +31,7 @@ const Technologies: FC = () => {
     }
   }, [inView]);
   return (
-    <Layout title="Technologies">
+    <Layout title="Technologies" id="technologies">
       <S.Container ref={ref} isVisible={isVisible}>
         <Paragraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et

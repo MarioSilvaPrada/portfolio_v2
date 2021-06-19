@@ -10,7 +10,6 @@ interface Props {
   imageUrl: string;
   type: string;
   isEven: boolean;
-  index: number;
 }
 
 const Card: FC<Props> = ({
@@ -45,12 +44,23 @@ const Card: FC<Props> = ({
         <S.Paragraph>{description}</S.Paragraph>
       </S.LeftSide>
 
-      <S.ImageWrapper
-        isImageScaled={isImageScaled}
-        onClick={() => setIsImageScaled(!isImageScaled)}
-      >
+      <S.ImageWrapper isImageScaled={isImageScaled}>
+        {isImageScaled && (
+          <S.CloseBtn onClick={() => setIsImageScaled(false)}>
+            <S.CloseIcon />
+          </S.CloseBtn>
+        )}
+
         <S.StyledImage src={imageUrl} />
-        <S.ZoomLayer isImageScaled={isImageScaled} />
+
+        {!isImageScaled && (
+          <S.ZoomLayer
+            isImageScaled={isImageScaled}
+            onClick={() => setIsImageScaled(true)}
+          >
+            <S.SearchIcon />
+          </S.ZoomLayer>
+        )}
       </S.ImageWrapper>
     </S.Wrapper>
   );

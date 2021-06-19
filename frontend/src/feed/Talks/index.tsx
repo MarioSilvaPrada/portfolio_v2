@@ -32,7 +32,7 @@ const Talks: FC<Props> = ({ talks }) => {
     return `${datesArr[month]} ${year}`;
   };
   return (
-    <Layout title="Talks">
+    <Layout title="Talks" id="talks">
       <S.Container>
         <S.TalksWrapper>
           {talks

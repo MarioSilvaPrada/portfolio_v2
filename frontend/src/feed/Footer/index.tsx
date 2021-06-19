@@ -10,7 +10,7 @@ const Footer: FC = () => {
   const mailTo = `mailto: ${myMail}`;
   const YEAR = new Date().getFullYear();
   return (
-    <Layout title="Contact me">
+    <Layout title="Contact me" id="contacts">
       <S.Container>
         <S.StyledText>Get in touch! You can find me at:</S.StyledText>
         <S.MailText href={mailTo}>{myMail}</S.MailText>

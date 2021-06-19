@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 type Props = {
   isScrolled: boolean;
@@ -16,7 +15,7 @@ export const Container = styled.div < Props > `
   transition: 0.7s;
 `;
 
-export const StyledLink = styled(Link)`
+export const StyledLink = styled.a`
   margin-right: 2rem;
   font-size: 1.2rem;
   color: white;

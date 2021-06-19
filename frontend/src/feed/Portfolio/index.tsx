@@ -14,7 +14,7 @@ interface Props {
 }
 
 const Portfolio: FC<Props> = ({ projects }) => (
-  <Layout title="Portfolio">
+  <Layout title="Portfolio" id="portfolio">
     <S.Container>
       {projects.map(({
         title, image, type, description,

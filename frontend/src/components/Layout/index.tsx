@@ -10,10 +10,11 @@ const Container = styled.div`
 interface Props {
   title: string;
   children: React.ReactNode;
+  id: string;
 }
 
-const Layout: FC<Props> = ({ title, children }) => (
-  <Container>
+const Layout: FC<Props> = ({ title, children, id }) => (
+  <Container id={id}>
     <Title>{title}</Title>
     {children}
   </Container>

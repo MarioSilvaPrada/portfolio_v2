@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+export const Link = styled.a``;
+
 export const Container = styled.button`
   background: ${({ theme }) => theme.colors.main};
   border: none;

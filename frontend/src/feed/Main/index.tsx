@@ -44,7 +44,7 @@ const Main: FC = () => {
           Prada
         </S.MainText>
         <S.JobTitle>Software Developer</S.JobTitle>
-        <Button>Check my work</Button>
+        <Button href="#portfolio">Check my work</Button>
       </S.GreetingsWrapper>
       <Social />
     </S.Container>
