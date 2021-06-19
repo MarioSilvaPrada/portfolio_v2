@@ -4,6 +4,7 @@ export interface IProjects {
   image: string;
   title: string;
   type: string;
+  link?: string;
 }
 
 export interface ITalks {

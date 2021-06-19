@@ -1,7 +1,5 @@
 import React, { FC, useEffect, useState } from 'react';
-import {
-  Services, Portfolio, Main, Technologies, Talks, Footer,
-} from 'feed';
+import { Services, Portfolio, Main, Technologies, Talks, Footer } from 'feed';
 import Spinner from 'components/Spinner';
 import { getProjects } from 'api/projects';
 import { getTalks } from 'api/talks';

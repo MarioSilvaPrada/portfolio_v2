@@ -6,7 +6,7 @@ type Props = {
   isEven?: boolean;
   isVisible?: boolean;
   isImageScaled?: boolean;
-  index?: number;
+  isLastItem?: boolean;
 };
 
 const DISTANCE = '80rem';
@@ -29,7 +29,7 @@ const opacityIn = keyframes`
   }
 `;
 
-export const Wrapper = styled.div < Props > `
+export const Wrapper = styled.div<Props>`
   background: white;
   padding: 2rem;
   border-radius: ${({ theme }) => theme.dimensions.borderRadius};
@@ -44,6 +44,13 @@ export const Wrapper = styled.div < Props > `
     1.5s ${({ isVisible }) => isVisible && opacityIn} linear forwards;
   position: relative;
   z-index: ${({ isImageScaled }) => (isImageScaled ? 1 : 0)};
+  margin-bottom: ${({ isLastItem }) => (isLastItem ? 0 : '3rem')};
+`;
+
+export const UrlLink = styled.a`
+  cursor: pointer;
+  font-size: 2.5rem;
+  color: ${({ theme }) => theme.colors.main};
 `;
 
 export const LeftSide = styled.div`
@@ -64,7 +71,7 @@ export const TitleWrap = styled.div`
 export const Title = styled.h1`
   margin-right: 1rem;
 `;
-export const ZoomLayer = styled.div < Props > `
+export const ZoomLayer = styled.div<Props>`
   background: rgba(0, 0, 0, 0.4);
   border-radius: ${({ theme }) => theme.dimensions.borderRadius};
   top: 0;
@@ -84,10 +91,11 @@ export const ZoomLayer = styled.div < Props > `
   }
 `;
 
-export const ImageWrapper = styled.div < Props > `
+export const ImageWrapper = styled.div<Props>`
   width: 28rem;
   position: relative;
-  transform: ${({ isImageScaled }) => (isImageScaled ? 'scale(2.5) translateX(-25%)' : 'scale(1) translateX(0)')};
+  transform: ${({ isImageScaled }) =>
+    isImageScaled ? 'scale(2.5) translateX(-25%)' : 'scale(1) translateX(0)'};
   transition: 0.5s;
 `;
 

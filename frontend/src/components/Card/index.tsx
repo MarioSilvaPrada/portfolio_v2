@@ -2,6 +2,8 @@ import React, { FC, useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 import { MdLaptopMac, MdPhoneIphone } from 'react-icons/md';
+import { BiLinkAlt } from 'react-icons/bi';
+
 import * as S from './style';
 
 interface Props {
@@ -10,10 +12,18 @@ interface Props {
   imageUrl: string;
   type: string;
   isEven: boolean;
+  link?: string;
+  isLastItem?: boolean;
 }
 
 const Card: FC<Props> = ({
-  title, description, imageUrl, type, isEven,
+  title,
+  description,
+  imageUrl,
+  type,
+  isEven,
+  link,
+  isLastItem,
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const { ref, inView } = useInView({
@@ -33,6 +43,7 @@ const Card: FC<Props> = ({
       ref={ref}
       isVisible={isVisible}
       isImageScaled={isImageScaled}
+      isLastItem={isLastItem}
     >
       <S.LeftSide>
         <S.TitleWrap>
@@ -40,6 +51,11 @@ const Card: FC<Props> = ({
           <S.IconContainer>
             {type === 'Mobile' ? <MdPhoneIphone /> : <MdLaptopMac />}
           </S.IconContainer>
+          {link && (
+            <S.UrlLink href={link} target='blank'>
+              <BiLinkAlt />
+            </S.UrlLink>
+          )}
         </S.TitleWrap>
         <S.Paragraph>{description}</S.Paragraph>
       </S.LeftSide>
