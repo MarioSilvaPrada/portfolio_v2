@@ -28,7 +28,7 @@ const opacityIn = keyframes`
   }
 `;
 
-export const Wrapper = styled.div < Props > `
+export const Wrapper = styled.div<Props>`
   background: white;
   padding: 2rem;
   border-radius: ${({ theme }) => theme.dimensions.borderRadius};
@@ -63,14 +63,35 @@ export const TitleWrap = styled.div`
 export const Title = styled.h1`
   margin-right: 1rem;
 `;
+export const ZoomLayer = styled.div<Props>`
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: ${({ theme }) => theme.dimensions.borderRadius};
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  opacity: ${({ isImageScaled }) => (isImageScaled ? 1 : 0)};
+  transition: 0.3s;
 
-export const StyledImage = styled.img < Props > `
+  &:hover {
+    opacity: 1;
+  }
+`;
+
+export const ImageWrapper = styled.div<Props>`
   width: 28rem;
+  position: relative;
+  cursor: pointer;
+  transform: ${({ isImageScaled }) =>
+    isImageScaled ? 'scale(2.5) translateX(-25%)' : 'scale(1) translateX(0)'};
+  transition: 0.5s;
+`;
+
+export const StyledImage = styled.img`
+  width: 100%;
   border-radius: ${({ theme }) => theme.dimensions.borderRadius};
   background-color: white;
-  cursor: pointer;
-  transform: ${({ isImageScaled }) => (isImageScaled ? 'scale(2.5) translateX(-25%)' : 'scale(1) translateX(0)')};
-  transition: 0.5s;
 `;
 
 export const IconContainer = styled.div`

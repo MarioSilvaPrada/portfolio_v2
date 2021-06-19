@@ -13,9 +13,7 @@ interface Props {
   index: number;
 }
 
-const Card: FC<Props> = ({
-  title, description, imageUrl, type, isEven,
-}) => {
+const Card: FC<Props> = ({ title, description, imageUrl, type, isEven }) => {
   const [isVisible, setIsVisible] = useState(false);
   const { ref, inView } = useInView({
     threshold: 0,
@@ -44,11 +42,14 @@ const Card: FC<Props> = ({
         </S.TitleWrap>
         <S.Paragraph>{description}</S.Paragraph>
       </S.LeftSide>
-      <S.StyledImage
-        src={imageUrl}
+
+      <S.ImageWrapper
         isImageScaled={isImageScaled}
         onClick={() => setIsImageScaled(!isImageScaled)}
-      />
+      >
+        <S.StyledImage src={imageUrl} />
+        <S.ZoomLayer isImageScaled={isImageScaled} />
+      </S.ImageWrapper>
     </S.Wrapper>
   );
 };
