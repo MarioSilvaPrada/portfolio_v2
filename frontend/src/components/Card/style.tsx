@@ -29,7 +29,7 @@ const opacityIn = keyframes`
   }
 `;
 
-export const Wrapper = styled.div < Props > `
+export const Wrapper = styled.div<Props>`
   background: white;
   padding: 2rem;
   border-radius: ${({ theme }) => theme.dimensions.borderRadius};
@@ -49,7 +49,7 @@ export const Wrapper = styled.div < Props > `
 
 export const UrlLink = styled.a`
   cursor: pointer;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: ${({ theme }) => theme.colors.main};
 `;
 
@@ -71,7 +71,7 @@ export const TitleWrap = styled.div`
 export const Title = styled.h1`
   margin-right: 1rem;
 `;
-export const ZoomLayer = styled.div < Props > `
+export const ZoomLayer = styled.div<Props>`
   background: rgba(0, 0, 0, 0.4);
   border-radius: ${({ theme }) => theme.dimensions.borderRadius};
   top: 0;
@@ -91,10 +91,11 @@ export const ZoomLayer = styled.div < Props > `
   }
 `;
 
-export const ImageWrapper = styled.div < Props > `
+export const ImageWrapper = styled.div<Props>`
   width: 28rem;
   position: relative;
-  transform: ${({ isImageScaled }) => (isImageScaled ? 'scale(2.5) translateX(-25%)' : 'scale(1) translateX(0)')};
+  transform: ${({ isImageScaled }) =>
+    isImageScaled ? 'scale(2.5) translateX(-25%)' : 'scale(1) translateX(0)'};
   transition: 0.5s;
 `;
 
@@ -121,6 +122,7 @@ export const StyledImage = styled.img`
 `;
 
 export const IconContainer = styled.div`
-  font-size: 3rem;
+  font-size: 2rem;
   color: ${({ theme }) => theme.colors.main};
+  margin-right: 1rem;
 `;

@@ -13,13 +13,15 @@ const opacityAnim = keyframes`
     }
 `;
 
-export const Container = styled.div < Props > `
+export const Container = styled.div<Props>`
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   animation: 2s ${({ isVisible }) => isVisible && opacityAnim} ease-out;
+  max-width: 105rem;
+  margin: 0 auto;
 `;
 
 export const Title = styled.div`
