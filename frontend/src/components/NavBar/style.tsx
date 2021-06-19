@@ -5,7 +5,7 @@ type Props = {
 };
 
 export const Container = styled.div < Props > `
-  padding: ${({ theme }) => theme.dimensions.marginPage};
+  padding: 1rem ${({ theme }) => theme.dimensions.marginPage};
   background: ${({ isScrolled }) => (isScrolled ? 'rgba(0,0,0,0.8)' : 'transparent')};
   display: flex;
   align-items: center;
@@ -28,5 +28,5 @@ export const LinkWrapper = styled.div`
 `;
 
 export const Logo = styled.img`
-  width: 3rem;
+  width: 3.5rem;
 `;

@@ -8,7 +8,9 @@ const theme = {
     L: '1.8rem',
     XL: '3rem',
   },
-  breakpoints: {},
+  breakpoints: {
+    XL: '1080px',
+  },
   dimensions: {
     marginPage: '1.5rem',
     maxWidth: '80rem',

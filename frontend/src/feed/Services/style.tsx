@@ -36,6 +36,10 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 100%;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.XL}) {
+    flex-direction: column;
+  }
 `;
 
 export const CatWrapper = styled.div`
@@ -90,4 +94,9 @@ export const Check = styled(FaCheck)`
 export const ChainIcon = styled(BsLink)`
   font-size: 5rem;
   color: white;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.XL}) {
+    transform: rotate(90deg);
+    margin: 1rem 0;
+  }
 `;
