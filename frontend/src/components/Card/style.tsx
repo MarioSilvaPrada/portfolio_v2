@@ -29,7 +29,7 @@ const opacityIn = keyframes`
   }
 `;
 
-export const Wrapper = styled.div < Props > `
+export const Wrapper = styled.div<Props>`
   background: white;
   padding: 2rem;
   border-radius: ${({ theme }) => theme.dimensions.borderRadius};
@@ -45,6 +45,12 @@ export const Wrapper = styled.div < Props > `
   position: relative;
   z-index: ${({ isImageScaled }) => (isImageScaled ? 1 : 0)};
   margin-bottom: ${({ isLastItem }) => (isLastItem ? 0 : '3rem')};
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.XL}) {
+    flex-direction: column;
+    margin-right: 0;
+    margin-left: 0;
+  }
 `;
 
 export const UrlLink = styled.a`
@@ -57,6 +63,11 @@ export const LeftSide = styled.div`
   display: flex;
   flex-direction: column;
   width: 50%;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.XL}) {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
 `;
 
 export const Paragraph = styled.p`
@@ -67,11 +78,15 @@ export const TitleWrap = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 2rem;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.XL}) {
+    justify-content: center;
+  }
 `;
 export const Title = styled.h1`
   margin-right: 1rem;
 `;
-export const ZoomLayer = styled.div < Props > `
+export const ZoomLayer = styled.div<Props>`
   background: rgba(0, 0, 0, 0.4);
   border-radius: ${({ theme }) => theme.dimensions.borderRadius};
   top: 0;
@@ -91,10 +106,11 @@ export const ZoomLayer = styled.div < Props > `
   }
 `;
 
-export const ImageWrapper = styled.div < Props > `
+export const ImageWrapper = styled.div<Props>`
   width: 28rem;
   position: relative;
-  transform: ${({ isImageScaled }) => (isImageScaled ? 'scale(2.5) translateX(-25%)' : 'scale(1) translateX(0)')};
+  transform: ${({ isImageScaled }) =>
+    isImageScaled ? 'scale(2.5) translateX(-25%)' : 'scale(1) translateX(0)'};
   transition: 0.5s;
 `;
 

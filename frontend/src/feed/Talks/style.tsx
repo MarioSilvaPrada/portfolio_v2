@@ -27,6 +27,10 @@ export const Row = styled.div`
   display: flex;
   position: relative;
   margin-left: 15rem;
+  
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.XL}) {
+    margin-left: 5rem;
+  }
 `;
 
 export const TalksWrapper = styled.div``;

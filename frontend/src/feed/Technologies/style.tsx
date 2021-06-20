@@ -8,6 +8,8 @@ type Props = {
 
 const CIRCLE_SIZE = '43rem';
 
+const CIRCLE_SIZE_S = '28rem';
+
 const LogoAnim = keyframes`
     0% {
         transform: translateY(-.5rem);
@@ -26,7 +28,7 @@ const opacityAnim = keyframes`
     }
 `;
 
-export const Container = styled.div < Props > `
+export const Container = styled.div<Props>`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,9 +43,15 @@ export const ToolsWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   height: ${CIRCLE_SIZE};
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.XL}) {
+    width: ${CIRCLE_SIZE_S};
+    height: calc(${CIRCLE_SIZE_S} * 2);
+    margin: 2rem auto 0;
+  }
 `;
 
-export const Circle = styled.div < Props > `
+export const Circle = styled.div<Props>`
   display: flex;
   justify-content: center;
   position: absolute;
@@ -52,18 +60,33 @@ export const Circle = styled.div < Props > `
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.5);
   border: 5px solid ${({ theme }) => theme.colors.main};
-  ${({ right }) => right
-    && css`
+  ${({ right }) =>
+    right &&
+    css`
       right: 0;
     `}
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.XL}) {
+    height: 50%;
+    width: 100%;
+    ${({ right }) =>
+      right &&
+      css`
+        bottom: 5rem;
+      `};
+  }
 `;
 
-export const LogoContainer = styled.img < Props > `
+export const LogoContainer = styled.img<Props>`
   background-color: ${({ background }) => background || 'transparent'};
   height: 10rem;
   position: absolute;
   animation: 1s ${LogoAnim} infinite linear alternate;
   border-radius: ${({ theme }) => theme.dimensions.borderRadius};
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.XL}) {
+    height: 5rem;
+  }
 `;
 
 export const CircleTitle = styled.p`
@@ -72,4 +95,11 @@ export const CircleTitle = styled.p`
   width: 50%;
   text-align: center;
   margin-top: -5rem;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.XL}) {
+    position: absolute;
+    left: -10rem;
+    top: 60%;
+    transform: rotate(-90deg);
+  }
 `;
