@@ -58,7 +58,7 @@ const Card: FC<Props> = ({
             {type === 'Mobile' ? <MdPhoneIphone /> : <MdLaptopMac />}
           </S.IconContainer>
           {link && (
-            <S.UrlLink href={link} target='blank'>
+            <S.UrlLink href={link} target="blank">
               <BiLinkAlt />
             </S.UrlLink>
           )}
