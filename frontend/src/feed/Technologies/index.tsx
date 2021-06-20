@@ -33,7 +33,7 @@ const Technologies: FC = () => {
     }
   }, [inView]);
   return (
-    <Layout title='Technologies' id='technologies'>
+    <Layout title="Technologies" id="technologies">
       <S.Container ref={ref} isVisible={isVisible}>
         <Paragraph>{content.technologies}</Paragraph>
         <S.ToolsWrapper>
@@ -82,7 +82,7 @@ const Technologies: FC = () => {
                 right: '10rem',
                 animationDelay: getRandomTime(),
               }}
-              background='white'
+              background="white"
             />
           </S.Circle>
         </S.ToolsWrapper>

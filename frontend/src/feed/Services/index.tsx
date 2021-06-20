@@ -12,7 +12,7 @@ const Services = () => {
   const designOptions = ['Eye for detail', 'UX & UI', 'Design patterns'];
   return (
     <>
-      <Layout title='Services' id='services'>
+      <Layout title="Services" id="services">
         <S.Container>
           <Paragraph>{content.services}</Paragraph>
           <S.Wrapper>
