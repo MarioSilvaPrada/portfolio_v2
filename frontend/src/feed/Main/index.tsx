@@ -21,30 +21,28 @@ const Main: FC = () => {
     <S.Container ref={ref} isVisible={isVisible}>
       <S.ImageWrapper>
         <LazyImage
-          alt="Main Picture"
+          alt='Main Picture'
           placeholder={({ ref: placeRef }) => (
             <div ref={placeRef}>
               <h1>Loading..</h1>
             </div>
           )}
-          src="https://images-portfolio-v2.s3.eu-west-2.amazonaws.com/pic.png"
+          src='https://images-portfolio-v2.s3.eu-west-2.amazonaws.com/pic.png'
           actual={() => (
-            <S.ProfilePic src="https://images-portfolio-v2.s3.eu-west-2.amazonaws.com/pic.png" />
+            <S.ProfilePic src='https://images-portfolio-v2.s3.eu-west-2.amazonaws.com/pic.png' />
           )}
         />
       </S.ImageWrapper>
 
       <S.GreetingsWrapper>
-        <S.Text>Hello, I am</S.Text>
-        <S.MainText>
-          Mário
-          {' '}
-          <br />
-          {' '}
-          Prada
-        </S.MainText>
-        <S.JobTitle>Software Developer</S.JobTitle>
-        <Button href="#portfolio">Check my work</Button>
+        <div>
+          <S.Text>Hello, I am</S.Text>
+          <S.MainText>
+            Mário <br /> Prada
+          </S.MainText>
+          <S.JobTitle>Software Developer</S.JobTitle>
+        </div>
+        <Button href='#portfolio'>Check my work</Button>
       </S.GreetingsWrapper>
       <Social />
     </S.Container>

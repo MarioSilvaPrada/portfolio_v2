@@ -13,7 +13,7 @@ const opacityAnim = keyframes`
     }
 `;
 
-export const Container = styled.div < Props > `
+export const Container = styled.div<Props>`
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -38,19 +38,30 @@ export const ProfilePic = styled.img`
   width: 55rem;
   animation: 2s ${opacityAnim} ease-out;
 
-  @media screen and (max-width: 57rem) {
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.L}) {
     width: 100%;
   }
 `;
 
 export const GreetingsWrapper = styled.div`
   z-index: 10;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.L}) {
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 `;
 
 export const Text = styled.h1`
   color: white;
   text-shadow: 2px 20px 10px rgba(0, 0, 0, 0.25);
   font-size: 4rem;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.L}) {
+    font-size: 2rem;
+  }
 `;
 
 export const MainText = styled.h1`
@@ -58,6 +69,11 @@ export const MainText = styled.h1`
   text-shadow: 2px 20px 10px rgba(0, 0, 0, 0.25);
   font-size: 8.4rem;
   line-height: 8rem;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.L}) {
+    font-size: 4.4rem;
+    line-height: 4rem;
+  }
 `;
 
 export const JobTitle = styled.p`
@@ -65,4 +81,8 @@ export const JobTitle = styled.p`
   font-size: 3rem;
   text-shadow: 2px 20px 10px rgba(0, 0, 0, 0.25);
   margin-bottom: 4.7rem;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.L}) {
+    font-size: 2rem;
+  }
 `;

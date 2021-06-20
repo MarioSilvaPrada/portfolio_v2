@@ -10,6 +10,7 @@ const theme = {
   },
   breakpoints: {
     XL: '1080px',
+    L: '750px',
     S: '630px',
   },
   dimensions: {
