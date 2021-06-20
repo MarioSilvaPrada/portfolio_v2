@@ -37,6 +37,12 @@ const Card: FC<Props> = ({
       setIsVisible(true);
     }
   }, [inView]);
+
+  const goToUrl = (url: string) => {
+    if (window.innerWidth < 1080) {
+      window.open(url);
+    }
+  };
   return (
     <S.Wrapper
       isEven={isEven}
@@ -52,7 +58,7 @@ const Card: FC<Props> = ({
             {type === 'Mobile' ? <MdPhoneIphone /> : <MdLaptopMac />}
           </S.IconContainer>
           {link && (
-            <S.UrlLink href={link} target="blank">
+            <S.UrlLink href={link} target='blank'>
               <BiLinkAlt />
             </S.UrlLink>
           )}
@@ -67,7 +73,7 @@ const Card: FC<Props> = ({
           </S.CloseBtn>
         )}
 
-        <S.StyledImage src={imageUrl} />
+        <S.StyledImage src={imageUrl} onClick={() => goToUrl(imageUrl)} />
 
         {!isImageScaled && (
           <S.ZoomLayer
