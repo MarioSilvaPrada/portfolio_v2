@@ -1,6 +1,7 @@
 import React from 'react';
 import Paragraph from 'components/Paragraph';
 import Layout from 'components/Layout';
+import { content } from 'content';
 
 import { FaCodeBranch } from 'react-icons/fa';
 import { MdColorLens, MdLaptopMac, MdPhoneIphone } from 'react-icons/md';
@@ -11,20 +12,9 @@ const Services = () => {
   const designOptions = ['Eye for detail', 'UX & UI', 'Design patterns'];
   return (
     <>
-      <Layout title="Services" id="services">
+      <Layout title='Services' id='services'>
         <S.Container>
-          <Paragraph>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et
-            ultricies eros. Maecenas dolor metus, fringilla id sem non,
-            consectetur posuere ipsum. Donec vitae nisi tincidunt, auctor magna
-            at, vehicula nunc. Proin ornare tristique semper. Maecenas id ipsum
-            a tellus euismod accumsan. Sed nisl sapien, scelerisque sed eleifend
-            quis, vestibulum quis lectus. Nam lacus neque, varius ut ornare in,
-            volutpat non erat. Praesent pellentesque leo eget cursus eleifend.
-            In magna nunc, pellentesque eu pretium id, consequat sit amet quam.
-            Maecenas urna turpis, ornare at pellentesque tincidunt, viverra non
-            nibh. Nulla accumsan tellus ac eros pellentesque tempus.
-          </Paragraph>
+          <Paragraph>{content.services}</Paragraph>
           <S.Wrapper>
             <S.CatWrapper>
               <S.Square>

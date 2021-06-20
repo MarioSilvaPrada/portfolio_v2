@@ -4,6 +4,8 @@ import { useInView } from 'react-intersection-observer';
 import Paragraph from 'components/Paragraph';
 import Layout from 'components/Layout';
 
+import { content } from 'content';
+
 import ReactLogo from 'assets/images/technologies/react_logo.png';
 import ReduxLogo from 'assets/images/technologies/redux_logo.png';
 import TSLogo from 'assets/images/technologies/ts_logo.png';
@@ -31,16 +33,9 @@ const Technologies: FC = () => {
     }
   }, [inView]);
   return (
-    <Layout title="Technologies" id="technologies">
+    <Layout title='Technologies' id='technologies'>
       <S.Container ref={ref} isVisible={isVisible}>
-        <Paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et
-          ultricies eros. Maecenas dolor metus, fringilla id sem non,
-          consectetur posuere ipsum. Donec vitae nisi tincidunt, auctor magna
-          at, vehicula nunc. Proin ornare tristique semper. Maecenas id ipsum a
-          tellus euismod accumsan. Sed nisl sapien, scelerisque sed eleifend
-          quis, vestibulum quis lectus. Nam lacus neque, varius ut ornare in,
-        </Paragraph>
+        <Paragraph>{content.technologies}</Paragraph>
         <S.ToolsWrapper>
           <S.Circle>
             <S.CircleTitle>Frontend</S.CircleTitle>
@@ -87,7 +82,7 @@ const Technologies: FC = () => {
                 right: '10rem',
                 animationDelay: getRandomTime(),
               }}
-              background="white"
+              background='white'
             />
           </S.Circle>
         </S.ToolsWrapper>

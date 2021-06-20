@@ -21,6 +21,7 @@ module.exports = {
       feed: path.resolve(__dirname, './src/feed'),
       utils: path.resolve(__dirname, './src/utils'),
       api: path.resolve(__dirname, './src/api'),
+      content: path.resolve(__dirname, './src/content'),
     },
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.css'],
   },
