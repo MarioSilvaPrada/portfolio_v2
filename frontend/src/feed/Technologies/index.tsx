@@ -42,25 +42,22 @@ const Technologies: FC = () => {
 
             <S.LogoContainer
               src={TSLogo}
+              logo="typescript"
               style={{
-                top: '5rem',
-                left: '16rem',
                 animationDelay: getRandomTime(),
               }}
             />
             <S.LogoContainer
               src={ReduxLogo}
+              logo="redux"
               style={{
-                bottom: '6rem',
-                left: '16rem',
                 animationDelay: getRandomTime(),
               }}
             />
             <S.LogoContainer
               src={ReactLogo}
+              logo="react"
               style={{
-                top: '17rem',
-                left: '2rem',
                 animationDelay: getRandomTime(),
               }}
             />
@@ -69,17 +66,15 @@ const Technologies: FC = () => {
             <S.CircleTitle>Backend</S.CircleTitle>
             <S.LogoContainer
               src={DjangoLogo}
+              logo="django"
               style={{
-                top: '7rem',
-                right: '8rem',
                 animationDelay: getRandomTime(),
               }}
             />
             <S.LogoContainer
               src={RestLogo}
+              logo="drf"
               style={{
-                bottom: '7rem',
-                right: '10rem',
                 animationDelay: getRandomTime(),
               }}
               background="white"

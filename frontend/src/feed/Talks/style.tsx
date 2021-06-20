@@ -14,22 +14,26 @@ export const GitBullet = styled.div`
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 100%;
-  border: 6px solid ${({ theme }) => theme.colors.main};
+  border: 0.37rem solid ${({ theme }) => theme.colors.main};
 `;
 
 export const GitLine = styled.div`
   width: 0.3rem;
   height: 5rem;
   background: ${({ theme }) => theme.colors.main};
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.XL}) {
+    height: 7rem;
+  }
 `;
 
 export const Row = styled.div`
   display: flex;
   position: relative;
   margin-left: 15rem;
-  
+
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.XL}) {
-    margin-left: 5rem;
+    margin-left: 4rem;
   }
 `;
 

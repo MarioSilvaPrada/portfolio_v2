@@ -4,11 +4,13 @@ type Props = {
   isVisible?: boolean;
   right?: boolean;
   background?: string;
+  position?: string;
+  logo?: string;
 };
 
 const CIRCLE_SIZE = '43rem';
 
-const CIRCLE_SIZE_S = '30rem';
+const CIRCLE_SIZE_S = '29rem';
 
 const LogoAnim = keyframes`
     0% {
@@ -28,7 +30,74 @@ const opacityAnim = keyframes`
     }
 `;
 
-export const Container = styled.div < Props > `
+const getLogoPosition = (logo: string, withBreakpoint: boolean = false) => {
+  if (logo === 'typescript') {
+    if (withBreakpoint) {
+      return css`
+        top: 5rem;
+        right: 6rem;
+      `;
+    }
+
+    return css`
+      top: 8rem;
+      right: 9rem;
+    `;
+  }
+  if (logo === 'redux') {
+    if (withBreakpoint) {
+      return css`
+        bottom: 6rem;
+        left: 11rem;
+      `;
+    }
+
+    return css`
+      bottom: 5rem;
+      left: 16rem;
+    `;
+  }
+  if (logo === 'react') {
+    if (withBreakpoint) {
+      return css`
+        top: 5rem;
+        left: 5rem;
+      `;
+    }
+    return css`
+      top: 9rem;
+      left: 7rem;
+    `;
+  }
+  if (logo === 'django') {
+    if (withBreakpoint) {
+      return css`
+        top: 7rem;
+        left: 10rem;
+      `;
+    }
+    return css`
+      top: 9rem;
+      left: 14rem;
+    `;
+  }
+  if (logo === 'drf') {
+    if (withBreakpoint) {
+      return css`
+        bottom: 5rem;
+        right: 6rem;
+      `;
+    }
+    return css`
+      bottom: 7rem;
+      right: 10rem;
+    `;
+  }
+
+  return null;
+};
+
+export const Container = styled.div<Props>`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,7 +120,7 @@ export const ToolsWrapper = styled.div`
   }
 `;
 
-export const Circle = styled.div < Props > `
+export const Circle = styled.div<Props>`
   display: flex;
   justify-content: center;
   position: absolute;
@@ -60,30 +129,34 @@ export const Circle = styled.div < Props > `
   border-radius: 50%;
   background: rgba(0, 0, 0, 0.5);
   border: 5px solid ${({ theme }) => theme.colors.main};
-  ${({ right }) => right
-    && css`
+  ${({ right }) =>
+    right &&
+    css`
       right: 0;
     `}
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.XL}) {
     height: 50%;
     width: 100%;
-    ${({ right }) => right
-      && css`
+    ${({ right }) =>
+      right &&
+      css`
         bottom: 5rem;
       `};
   }
 `;
 
-export const LogoContainer = styled.img < Props > `
+export const LogoContainer = styled.img<Props>`
   background-color: ${({ background }) => background || 'transparent'};
   height: 10rem;
   position: absolute;
   animation: 1s ${LogoAnim} infinite linear alternate;
   border-radius: ${({ theme }) => theme.dimensions.borderRadius};
+  ${({ logo }) => getLogoPosition(logo)};
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.XL}) {
     height: 7rem;
+    ${({ logo }) => getLogoPosition(logo, true)};
   }
 `;
 
@@ -95,8 +168,9 @@ export const CircleTitle = styled.p`
   margin-top: -5rem;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.XL}) {
+    font-size: ${({ theme }) => theme.fontSizes.L};
     position: absolute;
-    left: -10rem;
+    left: -9rem;
     top: 60%;
     transform: rotate(-90deg);
   }

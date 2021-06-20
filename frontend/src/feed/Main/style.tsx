@@ -37,6 +37,10 @@ export const ImageWrapper = styled.div`
 export const ProfilePic = styled.img`
   width: 55rem;
   animation: 2s ${opacityAnim} ease-out;
+
+  @media screen and (max-width: 57rem) {
+    width: 100%;
+  }
 `;
 
 export const GreetingsWrapper = styled.div`

@@ -4,7 +4,8 @@ import { sections } from 'utils/sections';
 import * as S from './style';
 
 const NavBar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   const getIsScrolled = () => {
     const positionTop = document.documentElement.getBoundingClientRect().top;
@@ -33,6 +34,18 @@ const NavBar = () => {
           </S.StyledLink>
         ))}
       </S.LinkWrapper>
+      <S.BurgerIcon onClick={() => setIsMenuOpen(!isMenuOpen)} />
+      <S.FixedNavigation isOpen={isMenuOpen}>
+        {sections.map(({ text, to }) => (
+          <S.StyledNav
+            key={text}
+            href={`#${to}`}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            {text}
+          </S.StyledNav>
+        ))}
+      </S.FixedNavigation>
     </S.Container>
   );
 };
