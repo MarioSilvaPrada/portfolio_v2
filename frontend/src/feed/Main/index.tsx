@@ -28,9 +28,7 @@ const Main: FC = () => {
             </div>
           )}
           src="https://images-portfolio-v2.s3.eu-west-2.amazonaws.com/pic.png"
-          actual={() => (
-            <S.ProfilePic src="https://images-portfolio-v2.s3.eu-west-2.amazonaws.com/pic.png" />
-          )}
+          actual={({ imageProps }) => <S.ProfilePic {...imageProps} />}
         />
       </S.ImageWrapper>
 
