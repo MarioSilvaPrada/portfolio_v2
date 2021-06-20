@@ -27,7 +27,7 @@ const Card: FC<Props> = ({
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const { ref, inView } = useInView({
-    threshold: 0,
+    threshold: 0.6,
   });
 
   const [isImageScaled, setIsImageScaled] = useState<boolean>(false);
@@ -58,7 +58,7 @@ const Card: FC<Props> = ({
             {type === 'Mobile' ? <MdPhoneIphone /> : <MdLaptopMac />}
           </S.IconContainer>
           {link && (
-            <S.UrlLink href={link} target="blank">
+            <S.UrlLink href={link} target='blank'>
               <BiLinkAlt />
             </S.UrlLink>
           )}
