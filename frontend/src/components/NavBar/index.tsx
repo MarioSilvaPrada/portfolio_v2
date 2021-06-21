@@ -34,7 +34,12 @@ const NavBar = () => {
           </S.StyledLink>
         ))}
       </S.LinkWrapper>
-      <S.BurgerIcon onClick={() => setIsMenuOpen(!isMenuOpen)} />
+      {isMenuOpen ? (
+        <S.CloseIcon onClick={() => setIsMenuOpen(false)} />
+      ) : (
+        <S.BurgerIcon onClick={() => setIsMenuOpen(true)} />
+      )}
+
       <S.FixedNavigation isOpen={isMenuOpen}>
         {sections.map(({ text, to }) => (
           <S.StyledNav

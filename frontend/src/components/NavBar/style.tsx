@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { GiHamburgerMenu } from 'react-icons/gi';
+import { IoMdClose } from 'react-icons/io';
 
 type Props = {
   isScrolled: boolean;
@@ -9,9 +10,10 @@ type IFixedNavigation = {
   isOpen?: boolean;
 };
 
-export const Container = styled.div < Props > `
+export const Container = styled.div<Props>`
   padding: 1rem ${({ theme }) => theme.dimensions.marginPage};
-  background: ${({ isScrolled }) => (isScrolled ? 'rgba(0,0,0,0.8)' : 'transparent')};
+  background: ${({ isScrolled }) =>
+    isScrolled ? 'rgba(0,0,0,0.8)' : 'transparent'};
   display: flex;
   align-items: center;
   position: fixed;
@@ -54,7 +56,17 @@ export const BurgerIcon = styled(GiHamburgerMenu)`
   }
 `;
 
-export const FixedNavigation = styled.div < IFixedNavigation > `
+export const CloseIcon = styled(IoMdClose)`
+  color: white;
+  font-size: 3rem;
+  display: none;
+  z-index: 2;
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.S}) {
+    display: block;
+  }
+`;
+
+export const FixedNavigation = styled.div<IFixedNavigation>`
   position: fixed;
   top: 0;
   bottom: 0;
