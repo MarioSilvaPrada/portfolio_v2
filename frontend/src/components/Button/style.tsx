@@ -4,7 +4,7 @@ export const Link = styled.a``;
 
 export const Container = styled.button`
   background: ${({ theme }) => theme.colors.main};
-  border: none;
+  border: 2px solid ${({ theme }) => theme.colors.main};
   padding: 1.2rem 1.8rem;
   font-family: GilroyBold;
   font-size: ${({ theme }) => theme.fontSizes.L};

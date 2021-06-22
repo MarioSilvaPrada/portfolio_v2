@@ -11,7 +11,7 @@ export const Square = styled.div`
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 8rem;
+  font-size: 7rem;
   margin-bottom: 1rem;
 `;
 
@@ -33,7 +33,6 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
   margin-top: 2.5rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
   width: 100%;
 
@@ -57,14 +56,14 @@ export const CatTitle = styled.h1`
 
 export const StyledText = styled.p`
   color: ${({ theme }) => theme.colors.main};
-  font-size: 2.8rem;
+  font-size: ${({ theme }) => theme.fontSizes.L};
   text-align: center;
 `;
 
 export const IconsWrapper = styled.div`
   display: flex;
   color: white;
-  font-size: 10rem;
+  font-size: 8rem;
   justify-content: center;
   margin-bottom: 2rem;
 `;
@@ -94,6 +93,7 @@ export const Check = styled(FaCheck)`
 export const ChainIcon = styled(BsLink)`
   font-size: 5rem;
   color: white;
+  align-self: center;
 
   @media screen and (max-width: ${({ theme }) => theme.breakpoints.XL}) {
     transform: rotate(90deg);
