@@ -1,6 +1,6 @@
 export const content = {
-  services:
-    'Let\'s face it, development tends to be complex sometimes.',
-  technologies:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et ultricies eros. Maecenas dolor metus, fringilla id sem non, consectetur posuere ipsum. Donec vitae nisi tincidunt, auctor magna at, vehicula nunc. Proin ornare tristique semper. Maecenas id ipsum a tellus euismod accumsan. Sed nisl sapien, scelerisque sed eleifend quis, vestibulum quis lectus. Nam lacus neque, varius ut ornare in, volutpat non erat. Praesent pellentesque leo eget cursus eleifend. In magna nunc, pellentesque eu pretium id, consequat sit amet quam. Maecenas urna turpis, ornare at pellentesque tincidunt, viverra non nibh. Nulla accumsan tellus ac eros pellentesque tempus.',
+  services: `Let's face it, development tends to be complex sometimes, and is for that reason I like to discuss and plan in order to bring the best results to the top.`,
+  technologies: `As a developer I try to be agnostic regarding chosen technologies. However, there are some of them that brings me more joy to work with and as a 
+  result, I can present well-structured and completed products. React along with Redux and Typescript allow me to create beautiful User Interface in a clean and 
+  elegant way. In the other side, Django and Django Rest Framework offers an excellent  `,
 };
