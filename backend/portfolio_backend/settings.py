@@ -35,7 +35,7 @@ ALLOWED_HOSTS = ['portfolio-mariosilvaprada.herokuapp.com',
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:9000',
     'http://localhost:8000',
-    'http://www.mariosilvaprada.com',
+    'https://www.mariosilvaprada.com',
 )
 
 if DEBUG == 0:
