@@ -22,7 +22,7 @@ const Technologies: FC = () => {
   };
 
   return (
-    <Layout title='Technologies' id='technologies'>
+    <Layout title="Technologies" id="technologies">
       <S.Container>
         <Paragraph>{content.technologies}</Paragraph>
         <S.ToolsWrapper>
@@ -31,21 +31,21 @@ const Technologies: FC = () => {
 
             <S.LogoContainer
               src={TSLogo}
-              logo='typescript'
+              logo="typescript"
               style={{
                 animationDelay: getRandomTime(),
               }}
             />
             <S.LogoContainer
               src={ReduxLogo}
-              logo='redux'
+              logo="redux"
               style={{
                 animationDelay: getRandomTime(),
               }}
             />
             <S.LogoContainer
               src={ReactLogo}
-              logo='react'
+              logo="react"
               style={{
                 animationDelay: getRandomTime(),
               }}
@@ -55,18 +55,18 @@ const Technologies: FC = () => {
             <S.CircleTitle>Backend</S.CircleTitle>
             <S.LogoContainer
               src={DjangoLogo}
-              logo='django'
+              logo="django"
               style={{
                 animationDelay: getRandomTime(),
               }}
             />
             <S.LogoContainer
               src={RestLogo}
-              logo='drf'
+              logo="drf"
               style={{
                 animationDelay: getRandomTime(),
               }}
-              background='white'
+              background="white"
             />
           </S.Circle>
         </S.ToolsWrapper>
