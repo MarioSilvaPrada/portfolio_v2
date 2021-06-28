@@ -1,5 +1,4 @@
-import React, { FC, useState, useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
+import React, { FC } from 'react';
 
 import Paragraph from 'components/Paragraph';
 import Layout from 'components/Layout';
@@ -14,11 +13,6 @@ import DjangoLogo from 'assets/images/technologies/django_logo.png';
 import * as S from './style';
 
 const Technologies: FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const { ref, inView } = useInView({
-    threshold: 0,
-  });
-
   const getRandomTime = () => {
     const max = 1;
     const min = 0;
@@ -27,14 +21,9 @@ const Technologies: FC = () => {
     return `${rndInt}s`;
   };
 
-  useEffect(() => {
-    if (inView) {
-      setIsVisible(true);
-    }
-  }, [inView]);
   return (
-    <Layout title="Technologies" id="technologies">
-      <S.Container ref={ref} isVisible={isVisible}>
+    <Layout title='Technologies' id='technologies'>
+      <S.Container>
         <Paragraph>{content.technologies}</Paragraph>
         <S.ToolsWrapper>
           <S.Circle>
@@ -42,21 +31,21 @@ const Technologies: FC = () => {
 
             <S.LogoContainer
               src={TSLogo}
-              logo="typescript"
+              logo='typescript'
               style={{
                 animationDelay: getRandomTime(),
               }}
             />
             <S.LogoContainer
               src={ReduxLogo}
-              logo="redux"
+              logo='redux'
               style={{
                 animationDelay: getRandomTime(),
               }}
             />
             <S.LogoContainer
               src={ReactLogo}
-              logo="react"
+              logo='react'
               style={{
                 animationDelay: getRandomTime(),
               }}
@@ -66,18 +55,18 @@ const Technologies: FC = () => {
             <S.CircleTitle>Backend</S.CircleTitle>
             <S.LogoContainer
               src={DjangoLogo}
-              logo="django"
+              logo='django'
               style={{
                 animationDelay: getRandomTime(),
               }}
             />
             <S.LogoContainer
               src={RestLogo}
-              logo="drf"
+              logo='drf'
               style={{
                 animationDelay: getRandomTime(),
               }}
-              background="white"
+              background='white'
             />
           </S.Circle>
         </S.ToolsWrapper>

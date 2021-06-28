@@ -1,7 +1,6 @@
 import styled, { keyframes, css } from 'styled-components';
 
 type Props = {
-  isVisible?: boolean;
   right?: boolean;
   background?: string;
   position?: string;
@@ -18,15 +17,6 @@ const LogoAnim = keyframes`
     }
     100% {
       transform: translateY(.5rem);
-    }
-`;
-
-const opacityAnim = keyframes`
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
     }
 `;
 
@@ -102,7 +92,6 @@ export const Container = styled.div < Props > `
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  animation: 2s ${({ isVisible }) => isVisible && opacityAnim} ease-out;
 `;
 
 export const ToolsWrapper = styled.div`
