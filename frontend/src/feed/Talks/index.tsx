@@ -32,23 +32,24 @@ const Talks: FC<Props> = ({ talks }) => {
     return `${datesArr[month]} ${year}`;
   };
   return (
-    <Layout title='Talks' id='talks'>
+    <Layout title="Talks" id="talks">
       <S.Container>
         <S.TalksWrapper>
           {talks.length > 0 ? (
             talks
               .sort(
-                (a, b) =>
-                  new Date(a.date).valueOf() - new Date(b.date).valueOf()
+                (a, b) => new Date(a.date).valueOf() - new Date(b.date).valueOf(),
               )
-              .map(({ title, date, company, link, id }, i) => (
+              .map(({
+                title, date, company, link, id,
+              }, i) => (
                 <S.Row key={id}>
                   <S.StyledDate>{getDateString(date)}</S.StyledDate>
                   <S.GitWrapper>
                     <S.GitBullet />
                     {talks.length !== i + 1 && <S.GitLine />}
                   </S.GitWrapper>
-                  <S.IconWrapper href={link} target='blank'>
+                  <S.IconWrapper href={link} target="blank">
                     <BiLinkAlt />
                   </S.IconWrapper>
                   <S.Column>

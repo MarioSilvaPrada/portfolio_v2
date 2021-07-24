@@ -9,10 +9,12 @@ interface Props {
 }
 
 const Portfolio: FC<Props> = ({ projects }) => (
-  <Layout title='Portfolio' id='portfolio'>
+  <Layout title="Portfolio" id="portfolio">
     <S.Container>
       {projects.length > 0 ? (
-        projects.map(({ title, image, type, description, link }, i) => (
+        projects.map(({
+          title, image, type, description, link,
+        }, i) => (
           <Card
             key={title}
             title={title}
