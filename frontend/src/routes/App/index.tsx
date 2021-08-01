@@ -9,7 +9,7 @@ import { ITalks, IProjects } from 'utils/interface';
 import * as S from './style';
 
 const App: FC = () => {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [projects, setProjects] = useState<Array<IProjects>>([]);
   const [talks, setTalks] = useState<Array<ITalks>>([]);
 
