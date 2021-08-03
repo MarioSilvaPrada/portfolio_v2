@@ -35,5 +35,5 @@ You can find me on [![Twitter][1.2]][1], or on [![LinkedIn][2.2]][2].
 ![React](https://img.shields.io/badge/-React_&_React_Native-000?&logo=React)
 ![Redux](https://img.shields.io/badge/-Redux-000?&logo=Redux&logoColor=764abc)
 ![StyledComponents](https://img.shields.io/badge/-Styled_Components-000?&logo=styled-components)
-![Mac](https://img.shields.io/badge/OS-Mac-informational?&logo=apple)
+![Mac](https://img.shields.io/badge/OS-Mac?&logo=apple)
 ![VSCode](https://img.shields.io/badge/-VSCode-000?&logo=Visual%20Studio%20Code&logoColor=007ACC)
