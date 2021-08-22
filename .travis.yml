@@ -6,6 +6,8 @@ services:
 before_install:
   - docker build -t mariosilvaprada/portfolio -f Dockerfile.dev .
 
+script: 'true'
+
 deploy:
   provider: elasticbeanstalk
   region: 'eu-west-2'
