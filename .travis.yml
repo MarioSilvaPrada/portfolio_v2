@@ -4,3 +4,13 @@ services:
 
 before_install:
   - docker build -t mariosilvaprada/portfolio -f Dockerfile.dev
+
+deploy:
+  provider: elasticbeanstalk
+  region: 'eu-west-2'
+  app: 'portfolio'
+  env: 'Portfolio-env'
+  bucket_name: 'elasticbeanstalk-eu-west-2-509257244493'
+  bucket_path: 'portfolio'
+  on:
+    branch: master
