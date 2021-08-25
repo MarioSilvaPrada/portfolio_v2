@@ -1,4 +1,4 @@
-FROM python:3.7 as builder
+FROM python:3.7
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 WORKDIR /backend
@@ -8,4 +8,4 @@ COPY ./ ./
 
 FROM nginx
 EXPOSE 80
-COPY --from=builder /backend /usr/share/nginx/html
+COPY --from=0 /backend /usr/share/nginx/html
