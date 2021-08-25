@@ -7,5 +7,5 @@ RUN pip install -r ./requirements.txt
 COPY ./ ./
 
 FROM nginx
-EXPOSE 80
+EXPOSE 8000
 COPY --from=builder /backend /usr/share/nginx/html
