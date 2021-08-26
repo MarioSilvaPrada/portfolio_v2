@@ -30,7 +30,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['portfolio-mariosilvaprada.herokuapp.com',
-                 'localhost', '127.0.0.1', '192.168.1.133', 
+                 'portfolio-env.eba-qycrwhga.eu-west-2.elasticbeanstalk.com',
+                 'localhost', '127.0.0.1', '192.168.1.133',
                  '192.168.1.124']
 
 CORS_ORIGIN_WHITELIST = (
