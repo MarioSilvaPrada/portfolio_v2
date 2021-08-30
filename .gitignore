@@ -1,3 +1,6 @@
 .env
+.env.dev
+.env.prod
+.env.prod.db
 node_modules
 build/

@@ -3,24 +3,24 @@ services:
   app:
     build: .
     ports:
-      - 8000:80
+      - 8000:8000
     volumes:
-      - ./backend:/backend
+      - ./backend:/usr/src/app
     command: python manage.py runserver 0.0.0.0:8000
-    environment:
-      - DB_HOST=db
-      - DB_NAME=app
-      - DB_USER=postgres
-      - DB_PASS=supersecretpassword
-      - DEBUG=1
-      - SECRET_KEY=5cm3t*3_-o#hjniuoy*n4)vo92&&io5s3-m)h4@r91&a&$se96
-      - AWS_ACCESS_KEY_ID=AKIAXNEQY35GQSZ3WWFD
-      - AWS_SECRET_ACCESS_KEY=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
+    env_file:
+      - ./.env.dev
     depends_on:
       - db
   db:
     image: postgres:11
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
     environment:
       - POSTGRES_DB=app
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=supersecretpassword
+
+volumes:
+  postgres_data:
+
+  # https://testdriven.io/blog/dockerizing-django-with-postgres-gunicorn-and-nginx/
