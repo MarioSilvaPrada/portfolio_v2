@@ -60,9 +60,3 @@ USER app
 
 # run entrypoint.prod.sh
 ENTRYPOINT ["/home/app/web/entrypoint.prod.sh"]
-
-
-# FROM nginx
-# EXPOSE 80
-# COPY --from=builder ./backend /usr/share/nginx/html
-# CMD ["python", "manage.py", "runserver", "0.0.0.0:80"]

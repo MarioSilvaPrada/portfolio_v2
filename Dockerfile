@@ -26,8 +26,3 @@ COPY ./backend .
 
 # run entrypoint.sh
 ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
-
-# FROM nginx
-# EXPOSE 80
-# COPY --from=builder ./backend /usr/share/nginx/html
-# CMD ["python", "manage.py", "runserver", "0.0.0.0:80"]
