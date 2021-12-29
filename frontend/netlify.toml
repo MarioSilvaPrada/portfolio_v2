@@ -1,11 +1,5 @@
 [[redirects]]
-  from = "api/talks"
-  to = "http://85.245.204.7/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "api/projects"
+  from = "/api/*"
   to = "http://85.245.204.7/:splat"
   status = 200
   force = true
