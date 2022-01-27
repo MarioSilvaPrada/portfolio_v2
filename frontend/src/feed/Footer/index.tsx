@@ -27,7 +27,7 @@ const Footer: FC = () => {
           <S.Name>Mário Prada</S.Name>
           <S.SmallText>
             Copyright ©
-            {YEAR}
+            {YEAR}, Curioso Paradigma LDA
           </S.SmallText>
         </S.FooterContainer>
       </S.Container>
