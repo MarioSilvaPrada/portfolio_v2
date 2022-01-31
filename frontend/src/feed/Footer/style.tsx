@@ -61,4 +61,5 @@ export const SmallText = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.S};
   color: white;
   text-transform: uppercase;
+  margin-top: 0.8rem;
 `;
