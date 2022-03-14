@@ -1,7 +1,5 @@
 import React, { FC, useEffect, useState } from 'react';
-import {
-  Services, Portfolio, Main, Technologies, Talks, Footer,
-} from 'feed';
+import { Services, Portfolio, Main, Technologies, Talks, Footer } from 'feed';
 import Spinner from 'components/Spinner';
 import { getProjects } from 'api/projects';
 import { getTalks } from 'api/talks';
@@ -12,6 +10,8 @@ const App: FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [projects, setProjects] = useState<Array<IProjects>>([]);
   const [talks, setTalks] = useState<Array<ITalks>>([]);
+
+  const IS_UNDER_CONSTRUCTION = true;
 
   const getMyProjects = async () => {
     const res = await getProjects();
@@ -29,8 +29,10 @@ const App: FC = () => {
   };
 
   const getAllData = async () => {
-    await getMyProjects();
-    await getMyTalks();
+    if (!IS_UNDER_CONSTRUCTION) {
+      await getMyProjects();
+      await getMyTalks();
+    }
     setIsLoading(false);
   };
   useEffect(() => {
