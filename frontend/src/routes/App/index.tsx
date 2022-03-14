@@ -11,8 +11,6 @@ const App: FC = () => {
   const [projects, setProjects] = useState<Array<IProjects>>([]);
   const [talks, setTalks] = useState<Array<ITalks>>([]);
 
-  const IS_UNDER_CONSTRUCTION = true;
-
   const getMyProjects = async () => {
     const res = await getProjects();
 
@@ -29,10 +27,8 @@ const App: FC = () => {
   };
 
   const getAllData = async () => {
-    if (!IS_UNDER_CONSTRUCTION) {
-      await getMyProjects();
-      await getMyTalks();
-    }
+    await getMyProjects();
+    await getMyTalks();
     setIsLoading(false);
   };
   useEffect(() => {
