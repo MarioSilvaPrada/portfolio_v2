@@ -5,8 +5,7 @@ export const USE_HOME_SERVER = true;
 
 const getUrl = () => {
   if (PRODUCTION) {
-    console.log({ is: process.env.REACT_APP_API_HOME_SERVER });
-    if (USE_HOME_SERVER) return process.env.REACT_APP_API_HOME_SERVER;
+    if (USE_HOME_SERVER) return process.env.REACT_APP_API_ROOT;
     return process.env.API_URL;
   }
 
