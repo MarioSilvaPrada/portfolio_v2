@@ -5,8 +5,7 @@ export const USE_HOME_SERVER = true;
 
 const getUrl = () => {
   if (PRODUCTION) {
-    console.log({ is: process.env.API_HOME_SERVER });
-    if (USE_HOME_SERVER) return process.env.API_HOME_SERVER;
+    if (USE_HOME_SERVER) return process.env.NETLIFY_API_HOME_SERVER;
     return process.env.API_URL;
   }
 
