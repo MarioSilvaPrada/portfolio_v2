@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/portfolio/*"
-  to = "https://portfolio.mariosilvaprada.com/:splat"
+  to = "https://portfolio.mariosilvaprada.com/portfolio/:splat"
   status = 200
   force = true
 
