@@ -1,12 +1,10 @@
-import React, { FC, useEffect, useState } from 'react';
-import {
-  Services, Portfolio, Main, Technologies, Talks, Footer,
-} from 'feed';
-import Spinner from 'components/Spinner';
-import { getProjects } from 'api/projects';
-import { getTalks } from 'api/talks';
-import { ITalks, IProjects } from 'utils/interface';
-import * as S from './style';
+import React, { FC, useEffect, useState } from "react";
+import { Services, Portfolio, Main, Technologies, Talks, Footer } from "feed";
+import Spinner from "components/Spinner";
+import { getProjects } from "api/projects";
+import { getTalks } from "api/talks";
+import { ITalks, IProjects } from "utils/interface";
+import * as S from "./style";
 
 const App: FC = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -15,15 +13,16 @@ const App: FC = () => {
 
   const getMyProjects = async () => {
     const res = await getProjects();
+    console.log({ res });
     if (res.status === 200) {
-      setProjects(res.data);
+      setProjects(res.data.results);
     }
   };
   const getMyTalks = async () => {
     const res = await getTalks();
 
     if (res.status === 200) {
-      setTalks(res.data);
+      setTalks(res.data.results);
     }
   };
 
