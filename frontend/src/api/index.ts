@@ -6,7 +6,7 @@ export const USE_HOME_SERVER = true;
 const getUrl = () => {
   if (PRODUCTION) {
     console.log({ is: process.env.REACT_APP_API_ROOT });
-    if (USE_HOME_SERVER) return 'https://homeserver.mariosilvaprada.com/';
+    if (USE_HOME_SERVER) return 'https://homeserver.marioprada.me/';
     return process.env.API_URL;
   }
 
