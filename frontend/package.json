@@ -5,7 +5,7 @@
   "author": "mariosilvaprada",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack-dev-server --open --mode development",
+    "dev": "export NODE_OPTIONS=--openssl-legacy-provider webpack-dev-server --open --mode development --openssl-legacy-provider",
     "build": "webpack --mode production",
     "lint": "eslint --ext .jsx --ext .tsx --ext .js --fix ./src"
   },
