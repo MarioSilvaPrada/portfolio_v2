@@ -57,4 +57,8 @@ export const LabelContainer = styled.div`
   text-align: center;
   background-color: ${({ color }) => color};
   color: black;
+
+  @media screen and (max-width: ${({ theme }) => theme.breakpoints.L}) {
+    font-size: 1.1rem;
+  }
 `;
