@@ -1,40 +1,89 @@
-# Hey, folks! 👋
+<h1 align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&pause=1000&color=2E9EF7&center=true&vCenter=true&width=600&lines=Hey%2C+I'm+Mário+Prada+%F0%9F%91%8B;Full-Stack+Developer;React+%7C+TypeScript+%7C+Django;Building+SaaS+Magic+%E2%9C%A8" alt="Typing SVG" />
+</h1>
 
-Welcome to my Github page.
+<p align="center">
+  <em>Turning coffee into code and Figma designs into pixel-perfect interfaces. Former supply chain guy who found his true calling in semicolons and curly braces.</em>
+</p>
 
-<!-- Actual text -->
+<p align="center">
+  <a href="https://www.marioprada.me">Portfolio</a> •
+  <a href="https://www.linkedin.com/in/mariosilvaprada/">LinkedIn</a> •
+  <a href="https://twitter.com/MarioSilvaPrada">Twitter</a>
+</p>
 
-You can find me on [![Twitter][1.2]][1], or on [![LinkedIn][2.2]][2].
+---
 
-<!-- Icons -->
+### 🎯 What I'm Up To
 
-[1.2]: http://i.imgur.com/wWzX9uB.png 'twitter icon without padding'
-[2.2]: https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/linkedin-3-16.png 'LinkedIn icon without padding'
+Currently leading the tech charge as **Technology Leader & Entrepreneur** at [CareerHigher](https://www.careerhigher.com) 🚀
+📍 Remote from Lisbon, building for London and beyond
 
-<!-- Links to your social media accounts -->
+### 🛠️ Tech Stack
 
-[1]: https://twitter.com/MarioSilvaPrada
-[2]: https://www.linkedin.com/in/mariosilvaprada/
+**Frontend Craftsmanship**
+<p>
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white" alt="Redux" />
+  <img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" alt="Styled Components" />
+  <img src="https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Native" />
+</p>
 
-[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=MarioSilvaPrada)](https://github.com/anuraghazra/github-readme-stats)
+**Backend Sorcery**
+<p>
+  <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" alt="Django" />
+  <img src="https://img.shields.io/badge/Django_REST-ff1709?style=for-the-badge&logo=django&logoColor=white" alt="DRF" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+  <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
+</p>
 
-# Technologies & Tools 🔧
+**Tools & Workflow**
+<p>
+  <img src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
+  <img src="https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
+  <img src="https://img.shields.io/badge/VSCode-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white" alt="VS Code" />
+  <img src="https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white" alt="GraphQL" />
+</p>
 
-![](https://img.shields.io/badge/Code-Javascript-informational?style=flat&logo=javascript&logoColor=white&color=2bbc8a)
-![](https://img.shields.io/badge/Code-React_&_React_Native-informational?style=flat&logo=react&logoColor=white&color=2bbc8a)
-![](https://img.shields.io/badge/Code-Redux-informational?style=flat&logo=redux&logoColor=white&color=2bbc8a)
-![](https://img.shields.io/badge/Code-Styled_Components-informational?style=flat&logo=styled-components&logoColor=white&color=2bbc8a)
-![](https://img.shields.io/badge/IDE-Visual_Studio_Code-informational?style=flat&logo=visual-studio-code&logoColor=white&color=2bbc8a)
-![](https://img.shields.io/badge/OS-Mac-informational?style=flat&logo=apple&logoColor=white&color=2bbc8a)
+### 📊 GitHub Stats
 
-![HTML5](https://img.shields.io/badge/-HTML5-000?&logo=html5&logoColor=E34F26)
-![CSS](https://img.shields.io/badge/-CSS-000?&logo=css3&logoColor=1572B6)
-![JavaScript](https://img.shields.io/badge/-JavaScript-000?&logo=JavaScript&logoColor=ddc508)
-![TypeScript](https://img.shields.io/badge/-TypeScript-000?&logo=TypeScript&logoColor=007ACC)
-![Django](https://img.shields.io/badge/-Django-000?&logo=Django&logoColor=C9F0DD)
-![React](https://img.shields.io/badge/-React_&_React_Native-000?&logo=React)
-![Node.js](https://img.shields.io/badge/-Node-000?&logo=node.js)
-![Redux](https://img.shields.io/badge/-Redux-000?&logo=Redux&logoColor=764abc)
-![StyledComponents](https://img.shields.io/badge/-Styled_Components-000?&logo=styled-components)
-![Mac](https://img.shields.io/badge/OS-Mac?&logo=apple)
-![VSCode](https://img.shields.io/badge/-VSCode-000?&logo=Visual%20Studio%20Code&logoColor=007ACC)
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=MarioSilvaPrada&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="GitHub Stats" height="165" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MarioSilvaPrada&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" height="165" />
+</p>
+
+### 💼 What I Do Best
+
+- 🎨 Transform Figma designs into production-ready React applications
+- 📱 Build cross-platform mobile apps with React Native
+- ⚡ Architect scalable backends with Django REST Framework
+- 🧹 Write clean, maintainable code that doesn't make future-me cry
+- 🎤 Share knowledge through talks and mentoring (because debugging alone is no fun)
+
+### 🎲 Fun Facts
+
+- 🔄 Made the jump from corporate supply chain management to software development in 2019 (best plot twist ever)
+- 🎓 Harvard CS50 graduate and lifelong learner
+- 🎯 Mentor at Eddisrupt and speaker in the Portuguese tech community
+- 📚 When not coding: reading, gaming, exploring new places, or pretending my Spotify recommendations understand me
+
+<p align="center">
+  <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="400" alt="Coding" />
+</p>
+
+### 📫 Let's Connect
+
+Want to chat about React, Django, or the best way to organize your components folder?
+Reach out at **mariosilvaprada@gmail.com** or connect on [LinkedIn](https://www.linkedin.com/in/mariosilvaprada/)
+
+---
+
+<p align="center">
+  <i>"Code is like humor. When you have to explain it, it's bad." - Cory House</i>
+</p>
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=MarioSilvaPrada&label=Profile%20views&color=0e75b6&style=flat" alt="Profile views" />
+</p>
